@@ -23,10 +23,13 @@ body {
 .nav-buttons {
     display:flex;
     margin: auto;
-    width: 55%;
+    width: 60%;
     height: 80%;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 3vh;
+    align-items: center;
+    justify-content: center;
+    margin-left:6%;
 }
 
 .nav-buttons div {
@@ -46,8 +49,8 @@ body {
 
 .user {
     display: flex;
-    width: 10%;
-    justify-content: center;
+    width: 12%;
+    justify-content: start;
     align-items: center;
     flex-direction: row;
 }
