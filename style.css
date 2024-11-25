@@ -273,7 +273,7 @@ body {
 .footer-nav {
     display: flex;
     justify-content: space-between;
-    padding: 1% 30% 0 30%;
+    padding: 3% 30% 0 30%;
 }
 
 .footer-nav a {
@@ -289,25 +289,28 @@ body {
 }
 
 .footer-contact-links {
+    margin: 8vh 10% 0 10%;
+    width: 80%;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
+    justify-content: space-between;
+    align-items:start;
 }
 
 .footer-contact-links div {
     display: flex;
-    align-items: center;
-    margin: 0;
+    align-items: start;
+
 }
 
 .footer-contact-links div div img {
-    margin: 0;
     max-width: 15%;
     max-height: 15%;
 }
 
 .footer-contact-links div p {
+    width: 90%;
     margin:0;
     padding:0;
+    text-align: left;
 }
