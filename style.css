@@ -1,6 +1,12 @@
 body {
     margin:0;
-    background-color: #000;
+    background-image: url("TrashQuest2.jpg");
+    background-size: 1600px; 
+    background-color: black;
+}
+
+.bg-image {
+    filter: blur(8px);
 }
 
 .navbar {
