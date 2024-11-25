@@ -147,12 +147,14 @@ body {
 
 .tq {
     width: 25%;
-    margin-left: 25%;
+    margin-left: 5%;
     padding:2vh;
-    background-color: aqua;
+    font-size: 7vh;
+    /* background-color: aqua; */
+    color:#fff;
     display: flex;
     justify-content: end;
-    align-items: center;
+    align-items: end;
     flex-direction: column;
 }
 
@@ -161,14 +163,23 @@ body {
 }
 
 #by-tq{
-    font-size: 1vh;
+    font-size: 1.5vh;
     color:white;
-    text-align: center;
+    text-align: right;
+    width:30%;
+}
+
+.border {
+    width:0.1%;
+    background-color: white;
+    margin:0 1% 0 1%;
 }
 
 .motto {
-    width: 50%;
-    background-color: aquamarine;
+    width: 60%;
+    /* background-color: aquamarine; */
+    font-size: 4vh;
+    color:#fff;
     display: flex;
     justify-content: center;
     align-items: start;
@@ -180,6 +191,7 @@ body {
     margin:0;
 }
 
+/* Image slide show */
 
 .image-slideshow {
     position: relative;
