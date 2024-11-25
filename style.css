@@ -217,6 +217,7 @@ body {
 .carousel-slides {
     display: flex;
     transition: all 0.8s ease-in-out;
+    margin-bottom: 6vh;
 }
 
 .carousel-slide {
@@ -232,7 +233,7 @@ body {
 
 .carousel-btn {
     position: absolute;
-    top: 40%;
+    top: 45%;
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
