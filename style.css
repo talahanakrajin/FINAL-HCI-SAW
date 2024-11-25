@@ -246,3 +246,10 @@ body {
     margin:0;
     padding: 0;
 }
+
+.footer-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1% 30% 0 30%;
+}
+
