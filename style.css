@@ -289,28 +289,49 @@ body {
 }
 
 .footer-contact-links {
-    margin: 8vh 10% 0 10%;
-    width: 80%;
+    margin: 5vh auto 0 auto;
+    width: 30%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items:start;
 }
 
-.footer-contact-links div {
+.footer-contact-links a {
+    width: 10%;
     display: flex;
     align-items: start;
-
+    border: 2px solid #052114;
+    margin:1vh;
+    border-radius: 10vh;
+    text-align: center;
+    padding: 1vh;
 }
 
-.footer-contact-links div div img {
-    max-width: 15%;
-    max-height: 15%;
+.footer-contact-links a:hover {
+    border: 2px solid #fff;
 }
 
-.footer-contact-links div p {
-    width: 90%;
-    margin:0;
-    padding:0;
-    text-align: left;
+.footer-contact-links div {
+    width:100%;
+}
+
+.wa img {
+    max-width: 75%;
+    max-height: 75%;
+}
+
+.insta img {
+    max-width: 75%;
+    max-height: 75%;
+}
+
+.mail img {
+    max-width: 75%;
+    max-height: 75%;
+}
+
+.phone img {
+    max-width: 75%;
+    max-height: 75%;
 }
