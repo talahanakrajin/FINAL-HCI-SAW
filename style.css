@@ -181,6 +181,7 @@ body {
     color:white;
     text-align: right;
     width:37%;
+    margin-bottom: 8vh;
 }
 
 .border {
@@ -287,4 +288,26 @@ body {
     border: 2px solid white;
 }
 
+.footer-contact-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
 
+.footer-contact-links div {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.footer-contact-links div div img {
+    margin: 0;
+    max-width: 15%;
+    max-height: 15%;
+}
+
+.footer-contact-links div p {
+    margin:0;
+    padding:0;
+}
