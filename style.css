@@ -1,12 +1,22 @@
 body {
     margin:0;
-    background-image: url("TrashQuest2.jpg");
-    background-size: 1600px; 
     background-color: black;
+   
 }
 
 .bg-image {
-    filter: blur(8px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+    background-image: url("TrashQuest2.jpg");
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px); 
+    opacity: 0.7; 
+    
 }
 
 
