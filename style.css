@@ -131,14 +131,6 @@ body {
     margin:0;
 }
 
-.footer {
-    height: 30vh;
-    background-color: #21510f;
-    color:#fff;
-    margin:0;
-    padding: 0;
-}
-
 .content {
     margin-top: 4vh;
     display: flex;
@@ -243,4 +235,14 @@ body {
 .next:hover {
     box-shadow: 0 1vh 1vh rgba(0, 0, 0, 1);
     transition: all 0.3s ease-in-out;
+}
+
+
+/* Footer Section */
+.footer {
+    height: 30vh;
+    background-color: #052114;
+    color:#fff;
+    margin:0;
+    padding: 0;
 }
