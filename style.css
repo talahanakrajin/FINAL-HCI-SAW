@@ -189,7 +189,6 @@ body {
     position: relative;
     max-width: 600px;
     margin: auto;
-    margin-top: 5vh;
     overflow: hidden;
 }
 
@@ -201,6 +200,7 @@ body {
 .carousel-slide {
     min-width: 100%;
     box-sizing: border-box;
+    padding: 5px;
 }
 
 .carousel-slide img {
