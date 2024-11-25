@@ -14,7 +14,7 @@ body {
     background-image: url("TrashQuest2.jpg");
     background-size: cover;
     background-position: center;
-    filter: blur(1vh) brightness(65%); 
+    filter: blur(1vh) brightness(50%); 
     opacity: 0.7; 
     
     
