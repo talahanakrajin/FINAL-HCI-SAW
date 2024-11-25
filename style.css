@@ -179,3 +179,56 @@ body {
     text-align: left;
     margin:0;
 }
+
+
+.image-slideshow {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+    margin-top: 5vh;
+    overflow: hidden;
+}
+
+.carousel-slides {
+    display: flex;
+    transition: all 0.8s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carousel-slide img {
+    width: 100%;
+    display: flex;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.prev {
+    left: 10px;
+}
+
+.prev:hover {
+    box-shadow: 0 1vh 1vh rgba(0, 0, 0, 1);
+    transition: all 0.3s ease-in-out;
+}
+
+.next {
+    right: 10px;
+}
+
+.next:hover {
+    box-shadow: 0 1vh 1vh rgba(0, 0, 0, 1);
+    transition: all 0.3s ease-in-out;
+}
