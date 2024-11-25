@@ -142,13 +142,13 @@ body {
     position: relative;
     max-width: 600px;
     margin: auto;
+    margin-top: 5vh;
     overflow: hidden;
 }
 
-/* Carousel slides */
 .carousel-slides {
     display: flex;
-    transition: transform 0.5s ease-in-out;
+    transition: all 0.8s ease-in-out;
 }
 
 .carousel-slide {
@@ -158,13 +158,12 @@ body {
 
 .carousel-slide img {
     width: 100%;
-    display: block;
+    display: flex;
 }
 
-/* Navigation buttons */
 .carousel-btn {
     position: absolute;
-    top: 50%;
+    top: 40%;
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
@@ -177,6 +176,16 @@ body {
     left: 10px;
 }
 
+.prev:hover {
+    box-shadow: 0 1vh 1vh rgba(0, 0, 0, 1);
+    transition: all 0.3s ease-in-out;
+}
+
 .next {
     right: 10px;
+}
+
+.next:hover {
+    box-shadow: 0 1vh 1vh rgba(0, 0, 0, 1);
+    transition: all 0.3s ease-in-out;
 }
