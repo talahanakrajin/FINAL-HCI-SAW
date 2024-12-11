@@ -11,13 +11,11 @@ body {
     width: 100%;
     height: 100%;
     z-index: -1; 
-    background-image: url("TrashQuest2.jpg");
+    background-image: url("img/TrashQuest_bg.jpg");
     background-size: cover;
     background-position: center;
     filter: blur(1vh) brightness(50%); 
     opacity: 0.7; 
-    
-    
 }
 
 
@@ -35,7 +33,7 @@ body {
     border-bottom-right-radius: 5vh;
     height:90%;
     width: 25%;
-    font-size: 5vh;
+    font-size: 4.5vh;
     text-align: center;
     color:#fff;
     display: flex;
@@ -65,9 +63,9 @@ body {
 .nav-buttons {
     display:flex;
     margin: auto;
-    width: 60%;
+    width: 70%;
     height: 80%;
-    font-size: 3vh;
+    font-size: 2.5vh;
     align-items: center;
     justify-content: center;
     margin-left:3%;
@@ -92,7 +90,8 @@ body {
     background-color: #9EDF9C;
     transform: translateY(-3px);
     box-shadow: 0 1vh 1vh rgba(0, 0, 0, 0.3);
-    text-decoration: underline;
+    font-weight: 1000;
+    /* text-decoration: underline; */
 }
 
 .user {
@@ -260,6 +259,45 @@ body {
     transition: all 0.3s ease-in-out;
 }
 
+/* Content block */
+.content-block-left {
+    display:flex;
+    margin: 10vh auto;
+    justify-content: left;
+    align-items: center;
+    font-weight: 300;
+}
+
+.content-block-right {
+    display:flex;
+    margin: 10vh auto;
+    justify-content: right;
+    align-items: center;
+    font-weight: 300;
+}
+
+.content-block-left img{
+    width:55%;
+    margin: 0 4% 0 0;
+}
+
+.content-block-left .description {
+    width: 45%;
+    font-size: 10vh;
+    color:#fff;
+}
+
+.content-block-right img {
+    width:55%;
+    margin: 0 0 0 4%;
+}
+
+.content-block-right .description {
+    width: 45%;
+    font-size: 10vh;
+    color:#fff;
+}
+
 
 /* Footer Section */
 .footer {
@@ -273,7 +311,7 @@ body {
 .footer-nav {
     display: flex;
     justify-content: space-between;
-    padding: 3% 30% 0 30%;
+    padding: 3% 10% 0 10%;
 }
 
 .footer-nav a {
@@ -335,3 +373,103 @@ body {
     max-width: 75%;
     max-height: 75%;
 }
+
+
+@media screen and (max-width: 768px) {
+    /* Navbar adjustments */
+    .navbar {
+        height: auto;
+        flex-direction: column;
+        font-size:20%;
+        size:10%;
+    }
+
+    .logo {
+        width: 10%;
+        border-radius: 0;
+        padding: 2vh;
+        justify-content: center;
+    }
+
+    .logo:hover {
+        width: 100%;
+        height: 100%;
+    }
+
+    .nav-buttons {
+        width: 100%;
+        flex-direction: column;
+        margin: 0;
+        padding: 2vh;
+    }
+
+    .nav-buttons div {
+        margin: 1vh auto;
+        width: 90%;
+    }
+
+    .user {
+        width: 100%;
+        justify-content: center;
+        padding: 2vh;
+    }
+
+    /* Main content adjustments */
+    .content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .tq {
+        width: 90%;
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+        font-size: 5vh;
+    }
+
+    #by-tq {
+        width: 100%;
+        text-align: center;
+    }
+
+    .border {
+        width: 90%;
+        height: 0.1%;
+        margin: 3vh 0;
+    }
+
+    .motto {
+        width: 90%;
+        align-items: center;
+        text-align: center;
+        font-size: 3vh;
+    }
+
+    /* Image slideshow adjustments */
+    .image-slideshow {
+        max-width: 90%;
+    }
+
+    /* Footer adjustments */
+    .footer {
+        height: auto;
+        padding: 4vh 0;
+    }
+
+    .footer-nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 2vh;
+    }
+
+    .footer-nav a {
+        margin: 1vh 0;
+    }
+
+    .footer-contact-links {
+        width: 80%;
+    }
+}
+
