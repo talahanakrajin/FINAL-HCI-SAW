@@ -1,7 +1,6 @@
 body {
     margin:0;
     background-color: black;
-   
 }
 
 .bg-image {
@@ -373,6 +372,54 @@ body {
     max-height: 75%;
 }
 
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Same as index background */
+}
+
+.login-container h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.login-container form {
+    background-color: #9EDF9C;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.login-container label {
+    color: white;
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.login-container input {
+    width: 40vh;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.login-container button {
+    background-color: #526E48;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-container button:hover {
+    background-color: #3B4D36;
+}
 
 @media screen and (max-width: 768px) {
     /* Navbar adjustments */
@@ -471,4 +518,6 @@ body {
         width: 80%;
     }
 }
+
+
 
