@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/Trash Quest logo 1 1.jpeg" type="image/x-icon">
+</head>
+<body>
+    <div class="bg-image"></div>
+    <div class="login-container">
+        <h2>Register</h2>
+        <form id="register-form">
+            <label for="firstname">First Name:</label>
+            <input type="text" id="firstname" name="firstname" required>
+            <br>
+            <label for="lastname">Last Name:</label>
+            <input type="text" id="lastname" name="lastname" required>
+            <br>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <br>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+    <footer class="footer">
+        <nav class="footer-nav roboto-mono-300">
+            <a href="">About Us</a>
+            <a href="">Volunteer</a>
+            <a href="">My Progress</a>
+            <a href="">Contact Us</a>
+        </nav>
+        <div class="footer-contact-links">
+            <a href ="" class="wa">
+                <div>
+                    <img src="img/whatsapp.png" alt="wa">
+                </div>
+            </a>
+            <a class="insta">
+                <div>
+                    <img src="img/instagram.png" alt="ig">
+                </div>
+            </a>
+            <a class="mail">
+                <div>
+                    <img src="img/mail.png" alt="mail">
+                </div>
+            </a>
+            <a class="phone">
+                <div>
+                    <img src="img/telephone.png" alt="telp">
+                </div>
+            </a>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('register-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const firstname = document.getElementById('firstname').value;
+            const lastname = document.getElementById('lastname').value;
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            const user = {
+                firstname: firstname,
+                lastname: lastname,
+                username: username,
+                password: password
+            };
+
+            fetch('register.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(user)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    window.location.href = 'account.html';
+                } else {
+                    alert('Registration failed');
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+</html>
