@@ -146,4 +146,21 @@
     font-weight: 900;
     font-style: italic;
   }
-  
+
+.white-text {
+    color: white;
+}
+
+header, main, footer {
+  color : white;
+  text-align: center;
+  font-family: 'Kanit', sans-serif;
+}
+
+.progress-overview h2 {
+  font-family: 'Kanit', sans-serif;
+  color: black;
+  font-size: 1.5em;
+  font-weight: 500;
+ 
+}

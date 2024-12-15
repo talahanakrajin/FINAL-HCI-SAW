@@ -1,6 +1,9 @@
 body {
     margin:0;
     background-color: black;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .bg-image {
@@ -16,7 +19,6 @@ body {
     filter: blur(1vh) brightness(50%); 
     opacity: 0.7; 
 }
-
 
 /* Nav Bar */
 .navbar {
@@ -85,7 +87,7 @@ body {
 }
 
 .nav-buttons div a:hover {
-    background-color: #9EDF9C;
+    background-color: #9edf9c;
     transform: translateY(-3px);
     box-shadow: 0 1vh 1vh rgba(0, 0, 0, 0.3);
     font-weight: 1000;
@@ -146,7 +148,7 @@ body {
 
 .container {
     width: 100%;
-    height:100vh;
+    flex: 1;
     margin:0;
 }
 
@@ -296,6 +298,43 @@ body {
     color:#fff;
 }
 
+/* Progress bar and stats */
+.progress-container {
+    background-color:#9edf9c;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.progress-bar {
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.progress {
+    background-color: #4caf50;
+    height: 20px;
+    width: 0;
+    transition: width 0.5s;
+}
+
+.stats {
+    font-size: 1.2em;
+    color: #ffffff;
+}
+
+.stats p {
+    margin: 10px 0;
+}
+
+.progress-overview {
+    color: #ffffff;
+}
 
 /* Footer Section */
 .footer {
@@ -304,6 +343,9 @@ body {
     color:#fff;
     margin:0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .footer-nav {
@@ -419,6 +461,49 @@ body {
 
 .login-container button:hover {
     background-color: #3B4D36;
+}
+
+.user-info {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    color: #333;
+}
+
+.user-info h2, .user-info p {
+    margin: 10px 0;
+}
+
+.user-info .edit-button, .user-info .save-button {
+    background-color: #526E48;
+    color: white;
+    padding: 7px 17px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.user-info .edit-button:hover, .user-info .save-button:hover {
+    background-color: #3B4D36;
+}
+
+.user-info .logout-button {
+    background-color: #FF6347;
+    color: white;
+    padding: 7px 17px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.user-info .logout-button:hover {
+    background-color: #FF4500;
 }
 
 @media screen and (max-width: 768px) {
