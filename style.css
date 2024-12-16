@@ -1,7 +1,6 @@
 body {
     margin:0;
-    background-color: black;
-   
+    background-color: black;   
 }
 
 .bg-image {
@@ -23,7 +22,7 @@ body {
 .navbar {
     display: flex;
     height: 10.5vh;
-    background-color: #9EDF9C;
+    background-color: #0fa20a;
 }
 
 .logo {
@@ -34,7 +33,7 @@ body {
     width: 25%;
     font-size: 4.5vh;
     text-align: center;
-    color:#fff;
+    color:#44ea4f;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -45,7 +44,7 @@ body {
 .logo:hover {
     width: 30%;
     height: 130%;
-    font-size: 5.5vh;
+    font-size: 5vh;
 }
 
 
@@ -74,19 +73,20 @@ body {
     display: flex;
     margin: 1vh 4vw auto auto;
     width: 100%;
-    height:100%
+    height:100%;
+    color:#44ea4f;
 }
 
 .nav-buttons div a{
     width: 100%;
-    background-color: #C2FFC7 ;
+    background-color: #000000 ;
     text-align: center;
     height: 60%;
     border-radius: 2vh;
 }
 
 .nav-buttons div a:hover {
-    background-color: #9EDF9C;
+    background-color: #084406;
     transform: translateY(-3px);
     box-shadow: 0 1vh 1vh rgba(0, 0, 0, 0.3);
     font-weight: 1000;
@@ -163,7 +163,7 @@ body {
     padding:2vh;
     font-size: 7vh;
     /* background-color: aqua; */
-    color:#fff;
+    color:#44ea4f;
     display: flex;
     justify-content: end;
     align-items: end;
@@ -176,9 +176,9 @@ body {
 
 #by-tq{
     font-size: 1.5vh;
-    color:white;
+    color:#44ea4f;
     text-align: right;
-    width:37%;
+    width:25%;
     margin-bottom: 8vh;
 }
 
@@ -191,8 +191,7 @@ body {
 .motto {
     width: 60%;
     /* background-color: aquamarine; */
-    font-size: 4vh;
-    color:#fff;
+    color:#44ea4f;
     display: flex;
     justify-content: center;
     align-items: start;
@@ -202,6 +201,7 @@ body {
 .motto h2 {
     text-align: left;
     margin:0;
+    font-size: 8vh;
 }
 
 /* Image slide show */
@@ -283,7 +283,7 @@ body {
 .content-block-left .description {
     width: 45%;
     font-size: 10vh;
-    color:#fff;
+    color:#44ea4f;
 }
 
 .content-block-right img {
@@ -294,7 +294,7 @@ body {
 .content-block-right .description {
     width: 45%;
     font-size: 10vh;
-    color:#fff;
+    color:#44ea4f;
 }
 
 
@@ -379,12 +379,10 @@ body {
     .navbar {
         height: auto;
         flex-direction: column;
-        font-size:20%;
-        size:10%;
     }
 
     .logo {
-        width: 10%;
+        width: 100%;
         border-radius: 0;
         padding: 2vh;
         justify-content: center;
@@ -395,11 +393,22 @@ body {
         height: 100%;
     }
 
+    #logo-img {
+        width: 15%;
+        height: 10%;
+    }
+
+    #logo-adjust {
+        width: 80%;
+        font-size: 70%;
+    }
+
     .nav-buttons {
-        width: 100%;
-        flex-direction: column;
+        width: 70%;
+        flex-direction: row;
         margin: 0;
         padding: 2vh;
+        font-size: 10%;
     }
 
     .nav-buttons div {
@@ -408,7 +417,7 @@ body {
     }
 
     .user {
-        width: 100%;
+        width: 30%;
         justify-content: center;
         padding: 2vh;
     }
