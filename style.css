@@ -341,9 +341,9 @@ body {
 .footer {
     min-height: 34vh;
     background-color: #052114;
-    color: #fff;
-    margin: 0;
-    padding: 2vh 0;
+    color:#fff;
+    margin:0;
+    padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
