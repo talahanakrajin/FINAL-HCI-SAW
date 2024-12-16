@@ -451,6 +451,222 @@ body {
     margin-bottom: 20px;
 }
 
+/* Progress bar and stats */
+.progress-container {
+    background-color:#9edf9c;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.progress-bar {
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.progress {
+    background-color: #4caf50;
+    height: 20px;
+    width: 0;
+    transition: width 0.5s;
+}
+
+.stats {
+    font-size: 1.2em;
+    color: #ffffff;
+}
+
+.stats p {
+    margin: 10px 0;
+}
+
+.progress-overview {
+    color: #ffffff;
+}
+
+/* Footer Section */
+.footer {
+    height: 30vh;
+    background-color: #052114;
+    color:#fff;
+    margin:0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 3% 10% 0 10%;
+}
+
+.footer-nav a {
+    color:#fff;
+    text-decoration: none;
+    border: 2px solid #052114;   /*same bg-color as footer*/
+    padding:2%;
+    border-radius: 10%;
+}
+
+.footer-nav a:hover {
+    border: 2px solid white;
+}
+
+.footer-contact-links {
+    margin: 5vh auto 0 auto;
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:start;
+}
+
+.footer-contact-links a {
+    width: 10%;
+    display: flex;
+    align-items: start;
+    border: 2px solid #052114;
+    margin:1vh;
+    border-radius: 10vh;
+    text-align: center;
+    padding: 1vh;
+}
+
+.footer-contact-links a:hover {
+    border: 2px solid #fff;
+}
+
+.footer-contact-links div {
+    width:100%;
+}
+
+.wa img {
+    max-width: 75%;
+    max-height: 75%;
+}
+
+.insta img {
+    max-width: 75%;
+    max-height: 75%;
+}
+
+.mail img {
+    max-width: 75%;
+    max-height: 75%;
+}
+
+.phone img {
+    max-width: 75%;
+    max-height: 75%;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Same as index background */
+}
+
+.login-container h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.login-container form {
+    background-color: #9EDF9C;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.login-container label {
+    color: white;
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.login-container input {
+    width: 40vh;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.login-container button {
+    background-color: #526E48;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-container button:hover {
+    background-color: #3B4D36;
+}
+
+.user-info {
+    background-color: #9EDF9C;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    color: #333;
+}
+
+.user-info h2, .user-info p {
+    margin: 10px 0;
+}
+
+.user-info .edit-button, .user-info .save-button {
+    background-color: #526E48;
+    color: white;
+    padding: 7px 17px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.user-info .edit-button:hover, .user-info .save-button:hover {
+    background-color: #3B4D36;
+}
+
+.user-info .logout-button {
+    background-color: #FF6347;
+    color: white;
+    padding: 7px 17px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.user-info .logout-button:hover {
+    background-color: #FF4500;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Kanit', sans-serif;
+}
+
+button {
+    font-family: 'Roboto Mono', monospace;
+}
+
 @media screen and (max-width: 768px) {
     /* Navbar adjustments */
     .navbar {
