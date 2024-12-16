@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account</title>
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/Trash Quest logo 1 1.jpeg" type="image/x-icon">
+</head>
+<body>
+    <div class="bg-image"></div>
+    <header class="white-text">
+        <h1>Account Page</h1>
+    </header>
+    <main class="white-text">
+        <div class="account-container">
+            <div class="user-info">
+                <h2>Welcome, <span id="username-display">User</span></h2>
+                <form id="user-info-form">
+                    <label for="firstname">First Name:</label>
+                    <input type="text" id="firstname" name="firstname" value="John" readonly>
+                    <br>
+                    <label for="lastname">Last Name:</label>
+                    <input type="text" id="lastname" name="lastname" value="Doe" readonly>
+                    <br>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" value="exampleUser" readonly>
+                    <br>
+                    <button type="button" id="edit-button" class="edit-button">Edit</button>
+                    <button type="submit" id="save-button" class="save-button" style="display: none;">Save</button>
+                </form>
+                <br>
+                <button id="logout-button" class="logout-button">Logout</button>
+            </div>
+        </div>
+    </main>
+    <div class="footer">
+        <nav class="footer-nav roboto-mono-300">
+            <a href="">About Us</a>
+            <a href="">Volunteer</a>
+            <a href="">My Progress</a>
+            <a href="">Contact Us</a>
+        </nav>
+        <div class="footer-contact-links">
+            <a href ="" class="wa">
+                <div>
+                    <img src="img/whatsapp.png" alt="wa">
+                </div>
+            </a>
+            <a class="insta">
+                <div>
+                    <img src="img/instagram.png" alt="ig">
+                </div>
+            </a>
+            <a class="mail">
+                <div>
+                    <img src="img/mail.png" alt="mail">
+                </div>
+            </a>
+            <a class="phone">
+                <div>
+                    <img src="img/telephone.png" alt="telp">
+                </div>
+            </a>
+        </div>
+    </div>
+    <script>
+        // Example user data
+        const userData = {
+            username: 'exampleUser',
+            firstname: 'John',
+            lastname: 'Doe',
+            email: 'user@example.com'
+        };
+
+        // Display user data
+        document.getElementById('username-display').textContent = userData.username;
+        document.getElementById('firstname').value = userData.firstname;
+        document.getElementById('lastname').value = userData.lastname;
+        document.getElementById('username').value = userData.username;
+
+        // Edit button functionality
+        document.getElementById('edit-button').addEventListener('click', function() {
+            document.getElementById('firstname').removeAttribute('readonly');
+            document.getElementById('lastname').removeAttribute('readonly');
+            document.getElementById('username').removeAttribute('readonly');
+            document.getElementById('edit-button').style.display = 'none';
+            document.getElementById('save-button').style.display = 'inline';
+        });
+
+        // Save button functionality
+        document.getElementById('user-info-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('firstname').setAttribute('readonly', 'readonly');
+            document.getElementById('lastname').setAttribute('readonly', 'readonly');
+            document.getElementById('username').setAttribute('readonly', 'readonly');
+            document.getElementById('edit-button').style.display = 'inline';
+            document.getElementById('save-button').style.display = 'none';
+            // Save the updated user data (e.g., send to server)
+        });
+
+        // Logout button functionality
+        document.getElementById('logout-button').addEventListener('click', function() {
+            // Perform logout actions (e.g., clear session, redirect to login page)
+            window.location.href = 'login.html';
+        });
+    </script>
+</body>
+</html>

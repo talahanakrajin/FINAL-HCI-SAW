@@ -15,7 +15,7 @@
             <img id="logo-img" src="img/Trash Quest logo 1 1.jpeg" alt="TQ logo">
             <span id="logo-adjust">Trash Quest</span>
         </div>
-        <div>
+        <div class="nav_bar">
             <div class="nav-buttons roboto-mono-500">
                 <div class="about-us-"><a class="about-us-link">About Us</a></div>
                 <div class="volunteer"><a class="volunteer-link">Volunteer</a></div>
@@ -133,5 +133,15 @@
         </div>
     </div>
 <script src="something.js"></script>
+<script src="loginthing.js"></script>
+<script>
+    // Example usage
+    checkUserData('exampleUser').then(exists => {
+        if (!exists) {
+            document.getElementById('account-link').href = 'login.html';
+            document.getElementById('account-text').textContent = 'Log in to your account';
+        }
+    });
+</script>
 </body>
 </html>
