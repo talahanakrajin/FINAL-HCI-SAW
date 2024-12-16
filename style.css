@@ -162,7 +162,10 @@ body {
 .container {
     width: 100%;
     flex: 1;
-    margin:0;
+    height: 80%;
+    margin: 7% auto auto auto;
+    justify-content: center;
+    align-items: center;
 }
 
 .content {
@@ -312,6 +315,24 @@ body {
     width: 45%;
     font-size: 10vh;
     color:#44ea4f;
+}
+
+.donate-us {
+    display: flex;
+    padding: 10px 20px;
+    background-color: #0fa20a;
+    color: white;
+    justify-content: center;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+}
+
+.donate-us:hover {
+    background-color: #0c7a07;
 }
 
 
@@ -550,7 +571,6 @@ body {
 
 /* Footer Section */
 .footer {
-    height: 30vh;
     background-color: #052114;
     color:#fff;
     margin:0;
@@ -558,6 +578,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    height:100%;
 }
 
 .footer-nav {
