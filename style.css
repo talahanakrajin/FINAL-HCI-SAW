@@ -316,16 +316,18 @@ body {
 
 .donate-us {
     display: flex;
-    padding: 10px 20px;
+    padding: 5vh 10vw;
     background-color: #0fa20a;
     color: white;
     justify-content: center;
     border: none;
     border-radius: 10px;
-    font-size: 16px;
+    font-size: 40px;
+    font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s;
     text-decoration: none;
+    margin-bottom: 5vh;
 }
 
 .donate-us:hover {
@@ -477,12 +479,15 @@ body {
 }
 
 .join-content {
+    display: flex;
     padding: 20px;
     max-width: 600px;
-    margin: 0 auto;
+    margin-left: 6vw;
+    flex-direction: row;
 }
 
 .join-form {
+    width: 35vw;
     display: flex;
     flex-direction: column;
 }
@@ -490,6 +495,7 @@ body {
 .join-form label {
     margin-bottom: 5px;
     font-weight: bold;
+    align-self: flex-start;
 }
 
 .join-form input,
@@ -742,6 +748,13 @@ h1, h2, h3, h4, h5, h6 {
 
 button {
     font-family: 'Roboto Mono', monospace;
+}
+
+.donatebutton-centering {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
 }
 
 @media screen and (max-width: 768px) {
