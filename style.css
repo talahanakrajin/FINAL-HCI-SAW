@@ -57,11 +57,22 @@ body {
     margin:auto;
 }
 
+.nav_bar {
+    display:flex;
+    margin: auto;
+    width: 75%;
+    height: 80%;
+    font-size: 2.5vh;
+    align-items: center;
+    justify-content: center;
+    margin-left:3%;
+}
+
 .nav-buttons {
     display:flex;
     margin: auto;
     width: 70%;
-    height: 80%;
+    height: 100%;
     font-size: 2.5vh;
     align-items: center;
     justify-content: center;
@@ -70,7 +81,7 @@ body {
 
 .nav-buttons div {
     display: flex;
-    margin: 1vh 4vw auto auto;
+    margin: 1vh 2vw auto auto;
     width: 100%;
     height:100%;
     color:#44ea4f;
@@ -82,6 +93,7 @@ body {
     text-align: center;
     height: 60%;
     border-radius: 2vh;
+    font-size: 2.1vh;
 }
 
 .nav-buttons div a:hover {
@@ -94,18 +106,18 @@ body {
 
 .user {
     display: flex;
-    width: 12%;
+    width: 18%;
     justify-content: start;
     align-items: center;
     flex-direction: row;
-    padding-left: 4%;
-    
+    padding-left: 2%;
+    height:100%;
 }
 
 .user:hover {
     background-color: #9EDF9C;
-    transform: translateY(-1vh);
-    box-shadow: 0 1vh 1vh rgba(0, 0, 0, 0.3);
+    /* transform: translateY(-1vh); */
+    box-shadow: 1vh 2vh 2vh rgba(0, 0, 0, 0.3);
     font-size: 2.5vh;
 }
 
