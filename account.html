@@ -7,6 +7,21 @@
     <link rel="stylesheet" href="fonts.css">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="img/Trash Quest logo 1 1.jpeg" type="image/x-icon">
+    <style>
+        body, header, main, .footer, .footer-nav a, .footer-contact-links a {
+            color: white;
+        }
+        .account-container form {
+            color: initial;
+        }
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: #ccc;
+            margin: 0 auto 20px auto;
+        }
+    </style>
 </head>
 <body>
     <div class="bg-image"></div>
@@ -16,17 +31,25 @@
     <main class="white-text">
         <div class="account-container">
             <div class="user-info">
+                <div class="profile-picture"></div>
                 <h2>Welcome, <span id="username-display">User</span></h2>
                 <form id="user-info-form">
-                    <label for="firstname">First Name:</label>
-                    <input type="text" id="firstname" name="firstname" value="John" readonly>
-                    <br>
-                    <label for="lastname">Last Name:</label>
-                    <input type="text" id="lastname" name="lastname" value="Doe" readonly>
-                    <br>
-                    <label for="username">Username:</label>
-                    <input type="text" id="username" name="username" value="exampleUser" readonly>
-                    <br>
+                    <div class="form-group">
+                        <label for="firstname">First Name:</label>
+                        <input type="text" id="firstname" name="firstname" value="John" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastname">Last Name:</label>
+                        <input type="text" id="lastname" name="lastname" value="Doe" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username" value="exampleUser" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" value="password" readonly>
+                    </div>
                     <button type="button" id="edit-button" class="edit-button roboto-mono-300">Edit</button>
                     <button type="submit" id="save-button" class="save-button roboto-mono-300" style="display: none;">Save</button>
                 </form>
@@ -71,7 +94,7 @@
             username: 'exampleUser',
             firstname: 'John',
             lastname: 'Doe',
-            email: 'user@example.com'
+            password: 'password'
         };
 
         // Display user data
@@ -79,12 +102,14 @@
         document.getElementById('firstname').value = userData.firstname;
         document.getElementById('lastname').value = userData.lastname;
         document.getElementById('username').value = userData.username;
+        document.getElementById('password').value = userData.password;
 
         // Edit button functionality
         document.getElementById('edit-button').addEventListener('click', function() {
             document.getElementById('firstname').removeAttribute('readonly');
             document.getElementById('lastname').removeAttribute('readonly');
             document.getElementById('username').removeAttribute('readonly');
+            document.getElementById('password').removeAttribute('readonly');
             document.getElementById('edit-button').style.display = 'none';
             document.getElementById('save-button').style.display = 'inline';
         });
@@ -95,6 +120,7 @@
             document.getElementById('firstname').setAttribute('readonly', 'readonly');
             document.getElementById('lastname').setAttribute('readonly', 'readonly');
             document.getElementById('username').setAttribute('readonly', 'readonly');
+            document.getElementById('password').setAttribute('readonly', 'readonly');
             document.getElementById('edit-button').style.display = 'inline';
             document.getElementById('save-button').style.display = 'none';
             // Save the updated user data (e.g., send to server)
