@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="fonts.css">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="img/Trash Quest logo 1 1.jpeg" type="image/x-icon">
-    <title>Beach Cleanup - Trash Quest</title>
+    <title>Join - Trash Quest</title>
 </head>
 <body>
     <nav class="navbar">
@@ -16,29 +16,37 @@
         </div>
 
         <div class="nav-buttons roboto-mono-500">
-            <div class="about-us-"><a class="about-us-link">About Us</a></div>
-            <div class="volunteer"><a class="volunteer-link">Volunteer</a></div>
-            <div class="my-progress"><a class="my-progress-link">My Progress</a></div>
-            <div class="contact-us"><a class="contact-us-link">Contact Us</a></div>
+            <div class="about-us-"><a class="about-us-link" href="about-us.html">About Us</a></div>
+            <div class="volunteer"><a class="volunteer-link" href="volunteer.html">Volunteer</a></div>
+            <div class="my-progress"><a class="my-progress-link" href="my-progress.html">My Progress</a></div>
+            <div class="contact-us"><a class="contact-us-link" href="contact-us.html">Contact Us</a></div>
         </div>
     </nav>
 
-    <main class="volunteer-content">
-        <h1 class="kanit-bold">Beach Cleanup</h1>
-        <img src="img/bantargebang.jpg" alt="Beach Cleanup" class="main-image">
-        <p>Join us for a beach cleanup event to help keep our beaches clean and safe. This event is a great opportunity to make a positive impact on the environment and meet like-minded individuals.</p>
-        <h2>Event Details</h2>
-        <p><strong>Date:</strong> [Insert Date]</p>
-        <p><strong>Time:</strong> [Insert Time]</p>
-        <p><strong>Location:</strong> [Insert Location]</p>
-        <h2>What to Bring</h2>
-        <p>Reusable gloves</p>
-        <p>Water bottle</p>
-        <p>Sunscreen</p>
-        <p>Hat</p>
-        <p>Comfortable clothing and shoes</p>
-        <h2>Contact Information</h2>
-        <p>If you have any questions, please contact us at <a href="mailto:info@trashquest.org">info@trashquest.org</a>.</p>
+    <main class="join-content">
+        <h1 class="kanit-bold">Join Us</h1>
+        <form action="submit_form.php" method="post" class="join-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="event">Event:</label>
+            <select id="event" name="event" required>
+                <option value="beach-cleanup">Beach Cleanup</option>
+                <option value="park-restoration">Park Restoration</option>
+                <option value="community-recycling">Community Recycling</option>
+            </select>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit" class="join-button">Submit</button>
+        </form>
     </main>
 
     <div class="footer">
