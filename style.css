@@ -61,7 +61,7 @@ body {
     display:flex;
     margin: auto;
     width: 75%;
-    height: 80%;
+    height: 100%;
     font-size: 2.5vh;
     align-items: center;
     justify-content: center;
@@ -81,7 +81,7 @@ body {
 
 .nav-buttons div {
     display: flex;
-    margin: 1vh 2vw auto auto;
+    margin: 1.3vh 3vw auto auto;
     width: 100%;
     height:100%;
     color:#44ea4f;
@@ -91,9 +91,12 @@ body {
     width: 100%;
     background-color: #000000 ;
     text-align: center;
-    height: 60%;
+    height:50%;
     border-radius: 2vh;
     font-size: 2.1vh;
+    padding: 2.2vh 0 0 0;
+    color:inherit;
+    text-decoration: none;
 }
 
 .nav-buttons div a:hover {
@@ -273,22 +276,24 @@ body {
 /* Content block */
 .content-block-left {
     display:flex;
-    margin: 10vh auto;
+    margin: 0.5vh auto;
     justify-content: left;
     align-items: center;
     font-weight: 300;
+    background-color: rgba(13, 12, 12, 0.5);
 }
 
 .content-block-right {
     display:flex;
-    margin: 10vh auto;
+    margin: 3vh auto;
     justify-content: right;
     align-items: center;
     font-weight: 300;
+    background-color: rgba(13, 12, 12, 0.5);
 }
 
 .content-block-left img{
-    width:55%;
+    width:50%;
     margin: 0 4% 0 0;
 }
 
@@ -299,7 +304,7 @@ body {
 }
 
 .content-block-right img {
-    width:55%;
+    width:50%;
     margin: 0 0 0 4%;
 }
 
@@ -312,7 +317,7 @@ body {
 
 /* Footer Section */
 .footer {
-    height: 30vh;
+    height: 34vh;
     background-color: #052114;
     color:#fff;
     margin:0;
@@ -320,6 +325,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    height:100%;
 }
 
 .footer-nav {
@@ -425,30 +431,83 @@ body {
     color: #555;
 }
 
-.opportunity img:hover {
-    transform: scale(1.05);
-    filter: blur(2px);
-}
-
-.opportunity a::after {
-    content: '+';
-    position: relative;
-    bottom: 37%;
-    font-size: 3rem;
+.join-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #0fa20a;
     color: white;
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-
-.opportunity a:hover::after {
-    opacity: 1;
-}
-
-.main-image {
-    width: 100%;
-    height: auto;
+    text-align: center;
+    border: none;
     border-radius: 10px;
-    margin-bottom: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 5vh;
+}
+
+.join-button a {
+    text-decoration: none;
+    color: white;
+}
+
+.join-button:hover {
+    background-color: #0c7a07;
+}
+
+.join-content {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.join-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.join-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.join-form input,
+.join-form select,
+.join-form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.join-form button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    background-color: #0fa20a;
+    color: white;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.join-form button:hover {
+    background-color: #0c7a07;
+}
+
+.copyright {
+    display: flex;
+    width: 30%;
+    justify-content: center;
 }
 
 /* Progress bar and stats */
@@ -707,6 +766,11 @@ button {
     .nav-buttons div {
         margin: 1vh auto;
         width: 90%;
+    }
+
+    .nav-buttons div a {
+        color:inherit;
+        text-decoration: none;
     }
 
     .user {
