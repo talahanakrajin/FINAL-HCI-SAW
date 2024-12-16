@@ -7,6 +7,18 @@
     <link rel="stylesheet" href="fonts.css">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="img/Trash Quest logo 1 1.jpeg" type="image/x-icon">
+    <style>
+        .toggle-password {
+            cursor: pointer;
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .password-container {
+            position: relative;
+        }
+    </style>
 </head>
 <body>
     <div class="bg-image"></div>
@@ -23,42 +35,27 @@
             <input type="text" id="username" name="username" required>
             <br>
             <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
+            <div class="password-container">
+                <input type="password" id="password" name="password" required>
+                <span class="toggle-password" onclick="togglePasswordVisibility()">👁️</span>
+            </div>
             <br>
             <button type="submit" class="roboto-mono-300">Register</button>
         </form>
     </div>
-    <footer class="footer">
-        <nav class="footer-nav roboto-mono-300">
-            <a href="">About Us</a>
-            <a href="">Volunteer</a>
-            <a href="">My Progress</a>
-            <a href="">Contact Us</a>
-        </nav>
-        <div class="footer-contact-links">
-            <a href ="" class="wa">
-                <div>
-                    <img src="img/whatsapp.png" alt="wa">
-                </div>
-            </a>
-            <a class="insta">
-                <div>
-                    <img src="img/instagram.png" alt="ig">
-                </div>
-            </a>
-            <a class="mail">
-                <div>
-                    <img src="img/mail.png" alt="mail">
-                </div>
-            </a>
-            <a class="phone">
-                <div>
-                    <img src="img/telephone.png" alt="telp">
-                </div>
-            </a>
-        </div>
-    </footer>
     <script>
+        function togglePasswordVisibility() {
+            const passwordInput = document.getElementById('password');
+            const togglePassword = document.querySelector('.toggle-password');
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                togglePassword.textContent = '🙈';
+            } else {
+                passwordInput.type = 'password';
+                togglePassword.textContent = '👁️';
+            }
+        }
+
         document.getElementById('register-form').addEventListener('submit', function(event) {
             event.preventDefault();
             const firstname = document.getElementById('firstname').value;
@@ -73,22 +70,11 @@
                 password: password
             };
 
-            fetch('register.php', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(user)
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    window.location.href = 'login.html';
-                } else {
-                    alert('Registration failed');
-                }
-            })
-            .catch(error => console.error('Error:', error));
+            // Save user data to local storage
+            localStorage.setItem('user', JSON.stringify(user));
+
+            // Redirect to login page
+            window.location.href = 'login.html';
         });
     </script>
 </body>

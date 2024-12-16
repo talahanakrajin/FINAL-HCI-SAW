@@ -36,19 +36,19 @@
                 <form id="user-info-form">
                     <div class="form-group">
                         <label for="firstname">First Name:</label>
-                        <input type="text" id="firstname" name="firstname" value="John" readonly>
+                        <input type="text" id="firstname" name="firstname" readonly>
                     </div>
                     <div class="form-group">
                         <label for="lastname">Last Name:</label>
-                        <input type="text" id="lastname" name="lastname" value="Doe" readonly>
+                        <input type="text" id="lastname" name="lastname" readonly>
                     </div>
                     <div class="form-group">
                         <label for="username">Username:</label>
-                        <input type="text" id="username" name="username" value="exampleUser" readonly>
+                        <input type="text" id="username" name="username" readonly>
                     </div>
                     <div class="form-group">
                         <label for="password">Password:</label>
-                        <input type="password" id="password" name="password" value="password" readonly>
+                        <input type="password" id="password" name="password" readonly>
                     </div>
                     <button type="button" id="edit-button" class="edit-button roboto-mono-300">Edit</button>
                     <button type="submit" id="save-button" class="save-button roboto-mono-300" style="display: none;">Save</button>
@@ -58,51 +58,19 @@
             </div>
         </div>
     </main>
-    <div class="footer">
-        <nav class="footer-nav roboto-mono-300">
-            <a href="">About Us</a>
-            <a href="">Volunteer</a>
-            <a href="">My Progress</a>
-            <a href="">Contact Us</a>
-        </nav>
-        <div class="footer-contact-links">
-            <a href ="" class="wa">
-                <div>
-                    <img src="img/whatsapp.png" alt="wa">
-                </div>
-            </a>
-            <a class="insta">
-                <div>
-                    <img src="img/instagram.png" alt="ig">
-                </div>
-            </a>
-            <a class="mail">
-                <div>
-                    <img src="img/mail.png" alt="mail">
-                </div>
-            </a>
-            <a class="phone">
-                <div>
-                    <img src="img/telephone.png" alt="telp">
-                </div>
-            </a>
-        </div>
-    </div>
+    
     <script>
-        // Example user data
-        const userData = {
-            username: 'exampleUser',
-            firstname: 'John',
-            lastname: 'Doe',
-            password: 'password'
-        };
+        // Retrieve user data from session storage
+        const userData = JSON.parse(sessionStorage.getItem('loggedInUser'));
 
-        // Display user data
-        document.getElementById('username-display').textContent = userData.username;
-        document.getElementById('firstname').value = userData.firstname;
-        document.getElementById('lastname').value = userData.lastname;
-        document.getElementById('username').value = userData.username;
-        document.getElementById('password').value = userData.password;
+        if (userData) {
+            // Display user data
+            document.getElementById('username-display').textContent = userData.username;
+            document.getElementById('firstname').value = userData.firstname;
+            document.getElementById('lastname').value = userData.lastname;
+            document.getElementById('username').value = userData.username;
+            document.getElementById('password').value = userData.password;
+        }
 
         // Edit button functionality
         document.getElementById('edit-button').addEventListener('click', function() {
@@ -129,6 +97,7 @@
         // Logout button functionality
         document.getElementById('logout-button').addEventListener('click', function() {
             // Perform logout actions (e.g., clear session, redirect to login page)
+            sessionStorage.removeItem('loggedInUser');
             window.location.href = 'login.html';
         });
     </script>

@@ -24,11 +24,11 @@
             </div>
             
             <div class="user">
-                <a href="testing.html">
+                <a href="account.html">
                     <img src="img/user.png" alt="user_img">
                     <div class="user-points">
-                        <span>User</span>
-                        <p>₱10000</p>
+                        <span id="user-name">User</span>
+                        <p id="user-points">₱10000</p>
                     </div>
                 </a>
             </div>
@@ -146,6 +146,13 @@
             document.getElementById('account-text').textContent = 'Log in to your account';
         }
     });
+  
+    // Display logged-in user data
+    const loggedInUser = JSON.parse(sessionStorage.getItem('loggedInUser'));
+    if (loggedInUser) {
+        document.getElementById('user-name').textContent = loggedInUser.username;
+        document.getElementById('user-points').textContent = '₱10000'; // Example points
+    }
 </script>
 </body>
 </html>
