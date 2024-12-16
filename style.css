@@ -162,7 +162,10 @@ body {
 .container {
     width: 100%;
     flex: 1;
-    margin:0;
+    height: 80%;
+    margin: 7% auto auto auto;
+    justify-content: center;
+    align-items: center;
 }
 
 .content {
@@ -550,7 +553,6 @@ body {
 
 /* Footer Section */
 .footer {
-    height: 30vh;
     background-color: #052114;
     color:#fff;
     margin:0;
@@ -558,6 +560,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    height:100%;
 }
 
 .footer-nav {
