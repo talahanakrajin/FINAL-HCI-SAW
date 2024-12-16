@@ -189,6 +189,7 @@ body {
 
 .tq h1 {
     margin:0;
+    font-size:15vh;
 }
 
 #by-tq{
@@ -525,6 +526,12 @@ body {
 
 .join-form button:hover {
     background-color: #0c7a07;
+}
+
+.copyright {
+    display: flex;
+    width: 25%;
+    justify-content: center;
 }
 
 /* Progress bar and stats */
