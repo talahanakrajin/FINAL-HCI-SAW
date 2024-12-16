@@ -22,62 +22,22 @@
             <button type="submit" class="roboto-mono-300">Login</button>
         </form>
     </div>
-    <footer class="footer">
-        <nav class="footer-nav roboto-mono-300">
-            <a href="">About Us</a>
-            <a href="">Volunteer</a>
-            <a href="">My Progress</a>
-            <a href="">Contact Us</a>
-        </nav>
-        <div class="footer-contact-links">
-            <a href ="" class="wa">
-                <div>
-                    <img src="img/whatsapp.png" alt="wa">
-                </div>
-            </a>
-            <a class="insta">
-                <div>
-                    <img src="img/instagram.png" alt="ig">
-                </div>
-            </a>
-            <a class="mail">
-                <div>
-                    <img src="img/mail.png" alt="mail">
-                </div>
-            </a>
-            <a class="phone">
-                <div>
-                    <img src="img/telephone.png" alt="telp">
-                </div>
-            </a>
-        </div>
-    </footer>
     <script>
         document.getElementById('login-form').addEventListener('submit', function(event) {
             event.preventDefault();
             const username = document.getElementById('username').value;
             const password = document.getElementById('password').value;
-            const user = {
-                username: username,
-                password: password
-            };
 
-            fetch('login.php', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(user)
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    window.location.href = 'index.html';
-                } else {
-                    alert('Invalid username or password');
-                }
-            })
-            .catch(error => console.error('Error:', error));
+            // Retrieve user data from local storage
+            const storedUser = JSON.parse(localStorage.getItem('user'));
+
+            if (storedUser && storedUser.username === username && storedUser.password === password) {
+                // Save user data to session storage
+                sessionStorage.setItem('loggedInUser', JSON.stringify(storedUser));
+                window.location.href = 'index.html';
+            } else {
+                alert('Invalid username or password');
+            }
         });
     </script>
 </body>

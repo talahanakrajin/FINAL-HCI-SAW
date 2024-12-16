@@ -162,7 +162,10 @@ body {
 .container {
     width: 100%;
     flex: 1;
-    margin:0;
+    height: 80%;
+    margin: 7% auto auto auto;
+    justify-content: center;
+    align-items: center;
 }
 
 .content {
@@ -186,6 +189,7 @@ body {
 
 .tq h1 {
     margin:0;
+    font-size:15vh;
 }
 
 #by-tq{
@@ -337,25 +341,27 @@ body {
 
 /* Footer Section */
 .footer {
-    height: 34vh;
+    min-height: 34vh;
     background-color: #052114;
-    color:#fff;
-    margin:0;
-    padding: 0;
+    color: #fff;
+    margin: 0;
+    padding: 2vh 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    height:100%;
+    align-items: center;
 }
 
 .footer-nav {
     display: flex;
-    justify-content: space-between;
-    padding: 3% 10% 0 10%;
+    justify-content: center;
+    gap: 3vw;
+    padding: 2vh 0;
+    width: 80%;
+    max-width: 1200px;
 }
 
 .footer-nav a {
-    color:#fff;
+    color: #fff;
     text-decoration: none;
     border: 2px solid #052114;   /*same bg-color as footer*/
     padding:2%;
@@ -530,7 +536,7 @@ body {
 
 .copyright {
     display: flex;
-    width: 30%;
+    width: 25%;
     justify-content: center;
 }
 
@@ -574,80 +580,160 @@ body {
 
 /* Footer Section */
 .footer {
-    height: 30vh;
-    background-color: #052114;
-    color:#fff;
-    margin:0;
-    padding: 0;
+    position: relative;
+    margin-top: 300px;
+    padding: 3rem 0;
+    color: #fff;
+    background: #000;
+    margin-top: auto;
+  }
+  .footer__columns {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer__col-title {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+  }
+  .footer__col-title * ~ span {
+    margin-left: 1rem;
+  }
+  .footer a {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+  }
+  .footer a * ~ span {
+    margin-left: 1rem;
+  }
+  .footer__nav-list {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-}
-
-.footer-nav {
+    gap: 1.5rem;
+  }
+  .footer__copyrights {
+    padding-top: 3rem;
+    margin-top: 3rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .footer__copyrights p {
     display: flex;
-    justify-content: space-between;
-    padding: 3% 10% 0 10%;
-}
-
-.footer-nav a {
-    color:#fff;
-    text-decoration: none;
-    border: 2px solid #052114;   /*same bg-color as footer*/
-    padding:2%;
-    border-radius: 10%;
-}
-
-.footer-nav a:hover {
-    border: 2px solid white;
-}
-
-.footer-contact-links {
-    margin: 5vh auto 0 auto;
-    width: 30%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items:start;
-}
-
-.footer-contact-links a {
+  }
+  .footer__copyrights p a {
+    margin-left: 0.5rem;
+  }
+  @keyframes parralax {
+    0% {
+      background-position: 260px;
+    }
+    100% {
+      background-position: -10000vw;
+    }
+  }
+  @keyframes moto {
+    0% {
+      transform: translateY(0) rotate(0);
+    }
+    5% {
+      transform: translateY(0) rotate(-5deg);
+    }
+    25% {
+      transform: translateY(60px) rotate(-20deg);
+    }
+    49% {
+      transform: translateY(0) rotate(-1deg);
+    }
+    51% {
+      transform: translateY(0) rotate(1deg);
+    }
+    75% {
+      transform: translateY(60px) rotate(20deg);
+    }
+    80% {
+      transform: translateY(60px) rotate(0deg);
+    }
+    98% {
+      transform: translateY(0) rotate(0);
+    }
+  }
+  @keyframes voiture {
+    0% {
+      transform: rotate(0);
+    }
+    25% {
+      transform: rotate(-5deg);
+    }
+    50% {
+      transform: rotate(0);
+    }
+    75% {
+      transform: rotate(5deg);
+    }
+    100% {
+      transform: rotate(0);
+    }
+  }
+  .footer__parralax {
+    position: absolute;
+    left: 0;
+    top: -300px;
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+  }
+  .footer__parralax-premierplan {
+    background-position: 260px;
+  }
+  .footer__parralax-trees, .footer__parralax-premierplan, .footer__parralax-secondplan {
+    position: absolute;
+    inset: 0;
+    background-repeat: repeat-x;
+    background-position-y: 100% !important;
+    animation: parralax 600s linear infinite;
+  }
+  .footer__parralax-moto {
+    position: absolute;
+    bottom: 80px;
+    left: 50%;
+    margin-left: -250px;
+    height: 200px;
+    width: 150px;
+    background: url(https://i.ibb.co/JCGfFJd/moto-net.gif);
+    background-repeat: no-repeat;
+    transform-origin: 50% 80%;
+    animation: moto 5s linear infinite;
+  }
+  .footer__parralax-voiture {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    margin-left: 250px;
+    height: 114px;
+    width: 206px;
+    background: url(https://i.ibb.co/0Qhp4DN/voiture-fumee.gif);
+    background-repeat: no-repeat;
+    animation: voiture 1s linear infinite;
+  }
+  .footer__parralax-trees {
+    background-image: url(https://i.ibb.co/nQM4PGJ/arbres.png);
+    bottom: -60px;
+    animation-duration: 1000s;
+  }
+  .footer__parralax-premierplan {
+    background-image: url(https://i.ibb.co/RQhDWbk/premierplanv3.png);
+    animation-duration: 500s;
+  }
+  .footer__parralax-secondplan {
+    background-image: url(https://i.ibb.co/J3TjC4W/second-plan.png);
+    animation-duration: 600s;
+  }
+#footer-logo {
     width: 10%;
-    display: flex;
-    align-items: start;
-    border: 2px solid #052114;
-    margin:1vh;
-    border-radius: 10vh;
-    text-align: center;
-    padding: 1vh;
-}
-
-.footer-contact-links a:hover {
-    border: 2px solid #fff;
-}
-
-.footer-contact-links div {
-    width:100%;
-}
-
-.wa img {
-    max-width: 75%;
-    max-height: 75%;
-}
-
-.insta img {
-    max-width: 75%;
-    max-height: 75%;
-}
-
-.mail img {
-    max-width: 75%;
-    max-height: 75%;
-}
-
-.phone img {
-    max-width: 75%;
-    max-height: 75%;
+    height:10%;
 }
 
 .login-container {
@@ -707,7 +793,7 @@ body {
     width: 80%;
     max-width: 600px;
     text-align: center;
-    color: #333;
+    color: #ffffff;
 }
 
 .user-info h2, .user-info p {
@@ -750,6 +836,7 @@ button {
     font-family: 'Roboto Mono', monospace;
 }
 
+<<<<<<< HEAD
 .donatebutton-centering {
     display: flex;
     justify-content: center;
@@ -757,6 +844,38 @@ button {
     margin-top: 20px;
 }
 
+=======
+/* Form group styles */
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    flex: 1;
+    text-align: left;
+    margin-right: 10px;
+}
+
+.form-group input {
+    flex: 2;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.form-group label {
+    color: white;
+}
+
+.form-group input {
+    color: black;
+}
+
+
+>>>>>>> c2066a6f54bffd64eeefd9eb67c153f02ce8c8e0
 @media screen and (max-width: 768px) {
     /* Navbar adjustments */
     .navbar {
@@ -868,4 +987,5 @@ button {
         width: 80%;
     }
 }
+
 
