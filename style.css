@@ -317,7 +317,7 @@ body {
 
 /* Footer Section */
 .footer {
-    height: 30vh;
+    height: 34vh;
     background-color: #052114;
     color:#fff;
     margin:0;
@@ -431,30 +431,77 @@ body {
     color: #555;
 }
 
-.opportunity img:hover {
-    transform: scale(1.05);
-    filter: blur(2px);
-}
-
-.opportunity a::after {
-    content: '+';
-    position: relative;
-    bottom: 37%;
-    font-size: 3rem;
+.join-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #0fa20a;
     color: white;
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-
-.opportunity a:hover::after {
-    opacity: 1;
-}
-
-.main-image {
-    width: 100%;
-    height: auto;
+    text-align: center;
+    border: none;
     border-radius: 10px;
-    margin-bottom: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 5vh;
+}
+
+.join-button a {
+    text-decoration: none;
+    color: white;
+}
+
+.join-button:hover {
+    background-color: #0c7a07;
+}
+
+.join-content {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.join-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.join-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.join-form input,
+.join-form select,
+.join-form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.join-form button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    background-color: #0fa20a;
+    color: white;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.join-form button:hover {
+    background-color: #0c7a07;
 }
 
 .copyright {
