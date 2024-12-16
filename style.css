@@ -1,9 +1,6 @@
 body {
     margin:0;
-    background-color: black;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    background-color: black;   
 }
 
 .bg-image {
@@ -24,7 +21,7 @@ body {
 .navbar {
     display: flex;
     height: 10.5vh;
-    background-color: #9EDF9C;
+    background-color: #0fa20a;
 }
 
 .logo {
@@ -35,7 +32,7 @@ body {
     width: 25%;
     font-size: 4.5vh;
     text-align: center;
-    color:#fff;
+    color:#44ea4f;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -46,7 +43,7 @@ body {
 .logo:hover {
     width: 30%;
     height: 130%;
-    font-size: 5.5vh;
+    font-size: 5vh;
 }
 
 
@@ -60,11 +57,22 @@ body {
     margin:auto;
 }
 
+.nav_bar {
+    display:flex;
+    margin: auto;
+    width: 75%;
+    height: 80%;
+    font-size: 2.5vh;
+    align-items: center;
+    justify-content: center;
+    margin-left:3%;
+}
+
 .nav-buttons {
     display:flex;
     margin: auto;
     width: 70%;
-    height: 80%;
+    height: 100%;
     font-size: 2.5vh;
     align-items: center;
     justify-content: center;
@@ -73,21 +81,23 @@ body {
 
 .nav-buttons div {
     display: flex;
-    margin: 1vh 4vw auto auto;
+    margin: 1vh 2vw auto auto;
     width: 100%;
-    height:100%
+    height:100%;
+    color:#44ea4f;
 }
 
 .nav-buttons div a{
     width: 100%;
-    background-color: #C2FFC7 ;
+    background-color: #000000 ;
     text-align: center;
     height: 60%;
     border-radius: 2vh;
+    font-size: 2.1vh;
 }
 
 .nav-buttons div a:hover {
-    background-color: #9edf9c;
+    background-color: #084406;
     transform: translateY(-3px);
     box-shadow: 0 1vh 1vh rgba(0, 0, 0, 0.3);
     font-weight: 1000;
@@ -96,18 +106,18 @@ body {
 
 .user {
     display: flex;
-    width: 12%;
+    width: 18%;
     justify-content: start;
     align-items: center;
     flex-direction: row;
-    padding-left: 4%;
-    
+    padding-left: 2%;
+    height:100%;
 }
 
 .user:hover {
     background-color: #9EDF9C;
-    transform: translateY(-1vh);
-    box-shadow: 0 1vh 1vh rgba(0, 0, 0, 0.3);
+    /* transform: translateY(-1vh); */
+    box-shadow: 1vh 2vh 2vh rgba(0, 0, 0, 0.3);
     font-size: 2.5vh;
 }
 
@@ -164,7 +174,7 @@ body {
     padding:2vh;
     font-size: 7vh;
     /* background-color: aqua; */
-    color:#fff;
+    color:#44ea4f;
     display: flex;
     justify-content: end;
     align-items: end;
@@ -177,9 +187,9 @@ body {
 
 #by-tq{
     font-size: 1.5vh;
-    color:white;
+    color:#44ea4f;
     text-align: right;
-    width:37%;
+    width:25%;
     margin-bottom: 8vh;
 }
 
@@ -192,8 +202,7 @@ body {
 .motto {
     width: 60%;
     /* background-color: aquamarine; */
-    font-size: 4vh;
-    color:#fff;
+    color:#44ea4f;
     display: flex;
     justify-content: center;
     align-items: start;
@@ -203,6 +212,7 @@ body {
 .motto h2 {
     text-align: left;
     margin:0;
+    font-size: 8vh;
 }
 
 /* Image slide show */
@@ -285,7 +295,7 @@ body {
 .content-block-left .description {
     width: 45%;
     font-size: 10vh;
-    color:#fff;
+    color:#44ea4f;
 }
 
 .content-block-right img {
@@ -296,46 +306,9 @@ body {
 .content-block-right .description {
     width: 45%;
     font-size: 10vh;
-    color:#fff;
+    color:#44ea4f;
 }
 
-/* Progress bar and stats */
-.progress-container {
-    background-color:#9edf9c;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 20px auto;
-    width: 80%;
-    max-width: 600px;
-    text-align: center;
-}
-
-.progress-bar {
-    background-color: #ddd;
-    border-radius: 5px;
-    overflow: hidden;
-    margin: 20px 0;
-}
-
-.progress {
-    background-color: #4caf50;
-    height: 20px;
-    width: 0;
-    transition: width 0.5s;
-}
-
-.stats {
-    font-size: 1.2em;
-    color: #ffffff;
-}
-
-.stats p {
-    margin: 10px 0;
-}
-
-.progress-overview {
-    color: #ffffff;
-}
 
 /* Footer Section */
 .footer {
@@ -415,97 +388,6 @@ body {
     max-height: 75%;
 }
 
-.login-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5); /* Same as index background */
-}
-
-.login-container h2 {
-    color: white;
-    margin-bottom: 20px;
-}
-
-.login-container form {
-    background-color: #9EDF9C;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    text-align: center;
-}
-
-.login-container label {
-    color: white;
-    display: block;
-    margin: 10px 0 5px;
-}
-
-.login-container input {
-    width: 40vh;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: none;
-    border-radius: 5px;
-}
-
-.login-container button {
-    background-color: #526E48;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.login-container button:hover {
-    background-color: #3B4D36;
-}
-
-.user-info {
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 10px;
-    padding: 20px;
-    margin: 20px auto;
-    width: 80%;
-    max-width: 600px;
-    text-align: center;
-    color: #333;
-}
-
-.user-info h2, .user-info p {
-    margin: 10px 0;
-}
-
-.user-info .edit-button, .user-info .save-button {
-    background-color: #526E48;
-    color: white;
-    padding: 7px 17px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 5px;
-}
-
-.user-info .edit-button:hover, .user-info .save-button:hover {
-    background-color: #3B4D36;
-}
-
-.user-info .logout-button {
-    background-color: #FF6347;
-    color: white;
-    padding: 7px 17px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 5px;
-}
-
-.user-info .logout-button:hover {
-    background-color: #FF4500;
-}
 
 .volunteer-content {
     padding: 20px;
@@ -574,12 +456,10 @@ body {
     .navbar {
         height: auto;
         flex-direction: column;
-        font-size:20%;
-        size:10%;
     }
 
     .logo {
-        width: 10%;
+        width: 100%;
         border-radius: 0;
         padding: 2vh;
         justify-content: center;
@@ -590,11 +470,22 @@ body {
         height: 100%;
     }
 
+    #logo-img {
+        width: 15%;
+        height: 10%;
+    }
+
+    #logo-adjust {
+        width: 80%;
+        font-size: 70%;
+    }
+
     .nav-buttons {
-        width: 100%;
-        flex-direction: column;
+        width: 70%;
+        flex-direction: row;
         margin: 0;
         padding: 2vh;
+        font-size: 10%;
     }
 
     .nav-buttons div {
@@ -603,7 +494,7 @@ body {
     }
 
     .user {
-        width: 100%;
+        width: 30%;
         justify-content: center;
         padding: 2vh;
     }
