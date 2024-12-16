@@ -836,7 +836,6 @@ button {
     font-family: 'Roboto Mono', monospace;
 }
 
-<<<<<<< HEAD
 .donatebutton-centering {
     display: flex;
     justify-content: center;
@@ -844,7 +843,6 @@ button {
     margin-top: 20px;
 }
 
-=======
 /* Form group styles */
 .form-group {
     display: flex;
@@ -875,7 +873,6 @@ button {
 }
 
 
->>>>>>> c2066a6f54bffd64eeefd9eb67c153f02ce8c8e0
 @media screen and (max-width: 768px) {
     /* Navbar adjustments */
     .navbar {
