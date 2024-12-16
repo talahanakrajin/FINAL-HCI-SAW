@@ -95,6 +95,8 @@ body {
     border-radius: 2vh;
     font-size: 2.1vh;
     padding: 2.2vh 0 0 0;
+    color:inherit;
+    text-decoration: none;
 }
 
 .nav-buttons div a:hover {
@@ -323,6 +325,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    height:100%;
 }
 
 .footer-nav {
@@ -454,6 +457,12 @@ body {
     margin-bottom: 20px;
 }
 
+.copyright {
+    display: flex;
+    width: 30%;
+    justify-content: center;
+}
+
 @media screen and (max-width: 768px) {
     /* Navbar adjustments */
     .navbar {
@@ -494,6 +503,11 @@ body {
     .nav-buttons div {
         margin: 1vh auto;
         width: 90%;
+    }
+
+    .nav-buttons div a {
+        color:inherit;
+        text-decoration: none;
     }
 
     .user {
