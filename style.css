@@ -507,6 +507,68 @@ body {
     background-color: #FF4500;
 }
 
+.volunteer-content {
+    padding: 20px;
+}
+
+.volunteer-content h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.opportunities {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.opportunity {
+    width: 30%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.opportunity img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.opportunity h2 {
+    margin: 10px 0;
+}
+
+.opportunity p {
+    font-size: 14px;
+    color: #555;
+}
+
+.opportunity img:hover {
+    transform: scale(1.05);
+    filter: blur(2px);
+}
+
+.opportunity a::after {
+    content: '+';
+    position: relative;
+    bottom: 37%;
+    font-size: 3rem;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.opportunity a:hover::after {
+    opacity: 1;
+}
+
+.main-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
 @media screen and (max-width: 768px) {
     /* Navbar adjustments */
     .navbar {
@@ -604,6 +666,4 @@ body {
         width: 80%;
     }
 }
-
-
 
