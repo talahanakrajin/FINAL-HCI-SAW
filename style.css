@@ -915,6 +915,59 @@ button {
     color: black;
 }
 
+.donate-content {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.donate-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.donate-form h1 {
+    align-self: flex-start; /* Align heading to the left */
+    margin-bottom: 20px;
+}
+
+.donate-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    align-self: flex-start; /* Align labels to the left */
+}
+
+.donate-form input,
+.donate-form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%; /* Ensure full width */
+}
+
+.donate-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    background-color: #0fa20a;
+    color: white;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.donate-button:hover {
+    background-color: #0c7a07;
+}
 
 @media screen and (max-width: 768px) {
     /* Navbar adjustments */
