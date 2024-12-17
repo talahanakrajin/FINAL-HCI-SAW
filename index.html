@@ -28,7 +28,7 @@
                     <img src="img/user.png" alt="user_img">
                     <div class="user-points">
                         <span id="user-name">User</span>
-                        <p id="user-points">₱10000</p>
+                        <p id="user-points">₱0</p>
                     </div>
                 </a>
             </div>
@@ -153,9 +153,20 @@
     const loggedInUser = JSON.parse(sessionStorage.getItem('loggedInUser'));
     if (loggedInUser) {
         document.getElementById('user-name').textContent = loggedInUser.username;
-        document.getElementById('user-points').textContent = '₱10000'; // Example points
+        const points = calculateUserPoints(loggedInUser);
+        document.getElementById('user-points').textContent = `₱${points}`;
     } else {
         document.getElementById('account-link').href = 'login.html';
+    }
+
+    // Function to calculate user points based on progress
+    function calculateUserPoints(user) {
+        // Example calculation, adjust as needed
+        const basePoints = 0;
+        const trashThrownPoints = user.trashThrown || 0;
+        const eventVolunteerPoints = user.eventVolunteer || 0;
+        const placesCleanedPoints = user.placesCleaned || 0;
+        return basePoints + trashThrownPoints + eventVolunteerPoints + placesCleanedPoints;
     }
 </script>
 </body>

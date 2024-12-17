@@ -7,6 +7,33 @@
     <link rel="stylesheet" href="fonts.css">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="img/Trash Quest logo 1 1.jpeg" type="image/x-icon">
+    <style>
+        .detailed-progress-container, .chart-container {
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 600px;
+            background-color: #44ea4f;
+        }
+        .progress-container {
+            position: relative;
+            background-color: #44ea4f;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 600px;
+            text-align: center;
+        }
+        .new-member-label {
+            font-family: 'Kanit', sans-serif;
+            color: white;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+    </style>
 </head>
 <body>
     <div class="bg-image"></div>
@@ -16,6 +43,7 @@
     <main class="white-text">
         <div class="progress-container">
             <h2 class="progress-overview">Progress Overview</h2>
+            <div class="new-member-label">New Member</div>
             <div class="progress-bar">
                 <div class="progress" style="width: 0%;"></div>
             </div>
@@ -24,12 +52,58 @@
                 <p>Event Volunteer: <span id="event-volunteer">0</span></p>
                 <p>Places Cleaned: <span id="places-cleaned">0</span></p>
             </div>
+            <span class="points-label">Points 0/120</span>
         </div>
-        <section id="detailed-progress">
+        <section id="detailed-progress" class="detailed-progress-container">
             <h2>Detailed Progress</h2>
-            <p>Detailed breakdown of your progress.</p>
+            <div class="stats">
+                <p>Organic Trash Thrown: <span id="organic-trash-thrown">0</span></p>
+                <p>Unorganic Trash Thrown: <span id="unorganic-trash-thrown">0</span></p>
+                <p>Hazardous Trash Thrown: <span id="hazardous-trash-thrown">0</span></p>
+                <p>Trash Recycled: <span id="trash-recycled">0</span></p>
+                <p>Products from Recycled Trash: <span id="products-recycled">0</span></p>
+                <p>Trash Cleaning Event Attended: <span id="cleaning-event-attended">0</span></p>
+                <p>Trash Recycling Event Attended: <span id="recycling-event-attended">0</span></p>
+            </div>
         </section>
+        <div class="chart-container">
+            <h2>Your Activity</h2>
+            <canvas id="activityChart"></canvas>
+        </div>
     </main>
-   
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('activityChart').getContext('2d');
+        const activityChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+                datasets: [{
+                    label: 'Activities',
+                    data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 2,
+                    fill: false
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Activities'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Months'
+                        }
+                    }
+                }
+            }
+        });
+    </script>
 </body>
 </html>
