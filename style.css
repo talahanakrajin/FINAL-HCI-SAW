@@ -225,9 +225,8 @@ body {
 /* Image slide show */
 .carousel-container {
     position: relative;
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 600px;
+    margin: auto;
     overflow: hidden;
     padding: 40px 0; /* Added padding to accommodate larger center image */
 }
