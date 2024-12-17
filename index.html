@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="fonts.css">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="img/Trash Quest logo 1 1.jpeg" type="image/x-icon">
@@ -17,14 +18,14 @@
         </div>
         <div class="nav_bar">
             <div class="nav-buttons roboto-mono-500">
-                <div class="about-us-"><a href="#about-start" class="about-us-link">About Us</a></div>
-                <div class="volunteer"><a href="volunteer.html" class="volunteer-link">Volunteer</a></div>
-                <div class="my-progress"><a href="my-progress.html" class="my-progress-link">My Progress</a></div>
-                <div class="contact-us"><a href="#contacts"class="contact-us-link">Contact Us</a></div>
+                <div class="about-us-"><a href="#about-us" class="about-us-link">About Us</a></div>
+                <div class="volunteer"><a class="volunteer-link">Volunteer</a></div>
+                <div class="my-progress"><a class="my-progress-link">My Progress</a></div>
+                <div class="contact-us"><a class="contact-us-link">Contact Us</a></div>
             </div>
             
             <div class="user">
-                <a id="account-link" href="account.html">
+                <a href="testing.html">
                     <img src="img/user.png" alt="user_img">
                     <div class="user-points">
                         <span id="user-name">User</span>
@@ -47,41 +48,38 @@
                 <h2>Embark on a Green Adventure!</h2>
             </div>
         </div>
-        <p id="by-tq">product of Trash Quest Group Inc.</p>
-        <div class="image-slideshow">
-            <div class="carousel-slides">
-                <div class="carousel-slide">
-                    <img src="img/bantargebang.jpg" alt="Slide 1">
-                </div>
-                <div class="carousel-slide">
-                    <img src="img/bantargebang.jpg" alt="Slide 2">
-                </div>
-                <div class="carousel-slide">
-                    <img src="img/bantargebang.jpg" alt="Slide 3">
-                </div>
-                <div class="carousel-slide">
-                    <img src="img/bantargebang.jpg" alt="Slide 4">
-                </div>
-                <div class="carousel-slide">
-                    <img src="img/bantargebang.jpg" alt="Slide 5">
-                </div>
-                <div class="carousel-slide">
-                    <img src="img/bantargebang.jpg" alt="Slide 6">
-                </div>
-                <div class="carousel-slide">
-                    <img src="img/bantargebang.jpg" alt="Slide 7">
-                </div>
-                <div class="carousel-slide">
-                    <img src="img/bantargebang.jpg" alt="Slide 8">
-                </div>
-                <div class="carousel-slide">
-                    <img src="img/bantargebang.jpg" alt="Slide 9">
-                </div>
-            </div>
-                <button class="carousel-btn prev">&#10094;</button>
-                <button class="carousel-btn next">&#10095;</button>
-        </div>
-    <div id="about-start" class="content-block-left oswald-500">
+    <p id="by-tq">product of Trash Quest Group Inc.</p>
+
+    <div class="carousel-container">
+      <div class="carousel-track">
+          <!-- Add your images here -->
+          <div class="carousel-slide">
+              <img src="img/children green.jpg" alt="Image 1">
+          </div>
+          <div class="carousel-slide">
+              <img src="img/snarttrash.jpg" alt="Image 2">
+          </div>
+          <div class="carousel-slide">
+              <img src="img/user.png" alt="Image 3">
+          </div>
+          <div class="carousel-slide">
+              <img src="img/TrashQuest_bg.jpg" alt="Image 4">
+          </div>
+          <div class="carousel-slide">
+              <img src="img/snarttrash.jpg" alt="Image 5">
+          </div>
+      </div>
+      <button class="carousel-button prev">&#10094;</button>
+      <button class="carousel-button next">&#10095;</button>
+  </div>
+
+  <div class="donatebutton-centering">
+    <div class="kanit-bold">
+        <button class="donate-us" onclick="window.location.href='donate.html'">Donate Now</button>
+    </div>
+  </div>
+
+    <div id="about-us" class="content-block-left oswald-500">
         <img src="img/smart_can1.png" alt="">
         <div class="description">
             lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. lorem ipsum;
@@ -102,42 +100,37 @@
         </div>
     </div>
 
-
-
-    <div id="contacts" class="footer">
-        <nav class="footer-nav roboto-mono-300">
-            <a href="">About Us</a>
-            <a href="">Volunteer</a>
-            <a href="">My Progress</a>
-            <a href="">Contact Us</a>
-        </nav>
-        <div class="footer-contact-links">
-            <a href ="" class="wa">
-                <div>
-                    <img src="img/whatsapp.png" alt="wa">
-                </div>
-            </a>
-            <a class="insta">
-                <div>
-                    <img src="img/instagram.png" alt="ig">
-                </div>
-            </a>
-            <a class="mail">
-                <div>
-                    <img src="img/mail.png" alt="mail">
-                </div>
-            </a>
-            <a class="phone">
-                <div>
-                    <img src="img/telephone.png" alt="telp">
-                </div>
-            </a>
-        </div>
-        <div class="copyright roboto-mono-300">
-            <p> ©2020-2024 TQ Corp.</p>
-        </div>
-    </div>
-
+  <div class="footer">
+      <nav class="footer-nav roboto-mono-300">
+          <a href="">About Us</a>
+          <a href="">Volunteer</a>
+          <a href="">My Progress</a>
+          <a href="">Donate Now</a>
+      </nav>
+      <div class="footer-contact-links">
+          <a href ="" class="wa">
+              <div>
+                  <img src="img/whatsapp.png" alt="wa">
+              </div>
+          </a>
+          <a class="insta">
+              <div>
+                  <img src="img/instagram.png" alt="ig">
+              </div>
+          </a>
+          <a class="mail">
+              <div>
+                  <img src="img/mail.png" alt="mail">
+              </div>
+          </a>
+          <a class="phone">
+              <div>
+                  <img src="img/telephone.png" alt="telp">
+              </div>
+          </a>
+      </div>
+  </div>
+<script src="script.js"></script>
 <script src="something.js"></script>
 <script src="loginthing.js"></script>
 <script>

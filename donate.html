@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/Trash Quest logo 1 1.jpeg" type="image/x-icon">
+    <title>Donate - Trash Quest</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo kanit-bold">
+            <img id="logo-img" src="img/Trash Quest logo 1 1.jpeg" alt="TQ logo">
+            <span id="logo-adjust">Trash Quest</span>
+        </div>
+        <div class="nav-buttons roboto-mono-500">
+            <div class="about-us-"><a href="about-us.html" class="about-us-link">About Us</a></div>
+            <div class="volunteer"><a href="volunteer.html" class="volunteer-link">Volunteer</a></div>
+            <div class="my-progress"><a href="my-progress.html" class="my-progress-link">My Progress</a></div>
+            <div class="contact-us"><a href="contact-us.html" class="contact-us-link">Contact Us</a></div>
+        </div>
+    </nav>
+
+    <main class="donate-content">
+        <h1 class="kanit-bold">Make a Donation</h1>
+        <p>Your generous donation will help us continue our mission to keep our environment clean and safe.</p>
+        <form id="donate-form" class="donate-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="amount">Donation Amount:</label>
+            <input type="number" id="amount" name="amount" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+
+            <button type="submit" class="donate-button">Donate</button>
+        </form>
+    </main>
+
+    <div class="footer">
+        <nav class="footer-nav roboto-mono-300">
+            <a href="about-us.html">About Us</a>
+            <a href="volunteer.html">Volunteer</a>
+            <a href="my-progress.html">My Progress</a>
+            <a href="contact-us.html">Contact Us</a>
+        </nav>
+        <div class="footer-contact-links">
+            <a href="" class="wa">
+                <div>
+                    <img src="img/whatsapp.png" alt="wa">
+                </div>
+            </a>
+            <a class="insta">
+                <div>
+                    <img src="img/instagram.png" alt="ig">
+                </div>
+            </a>
+            <a class="mail">
+                <div>
+                    <img src="img/mail.png" alt="mail">
+                </div>
+            </a>
+            <a class="phone">
+                <div>
+                    <img src="img/telephone.png" alt="telp">
+                </div>
+            </a>
+        </div>
+    </div>
+<script src="script.js"></script>
+<script src="something.js"></script>
+<script src="loginthing.js"></script>
+<script>
+    document.getElementById('donate-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the form from submitting normally
+        alert('Thank you for your donation!');
+    });
+
+    // Example usage
+    checkUserData('exampleUser').then(exists => {
+        if (!exists) {
+            document.getElementById('account-link').href = 'login.html';
+            document.getElementById('account-text').textContent = 'Log in to your account';
+        }
+    });
+</script>
+</body>
+</html>
