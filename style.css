@@ -1063,6 +1063,37 @@ button {
     .footer-contact-links {
         width: 80%;
     }
+    /* form adjustments */
+    .form-image {
+        display: none;
+    }
+
+    .donate-content {
+        margin-left: 3vw;
+    }
+
+    .join-content {
+        margin-left: 3vw;
+    }
+    
+
+    /* volunteer adjustments */
+    .opportunities {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .opportunity {
+        width: 80%;
+    }
+
+    .opportunity h2 {
+        font-size: 40px;
+    }
+
+    .opportunity p {
+        font-size: 25px;
+    }
 }
 
 
