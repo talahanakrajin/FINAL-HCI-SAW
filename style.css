@@ -919,8 +919,37 @@ button {
 @media screen and (max-width: 768px) {
     /* Navbar adjustments */
     .navbar {
-        height: auto;
         flex-direction: column;
+        justify-content: center;
+        height:fit-content;
+        width:fit-content;
+    }
+
+    .nav-buttons {
+        flex-direction: column;
+        flex-wrap:wrap;
+    }
+
+    .nav-buttons div a{
+        width:50%;
+        margin:0 25% 0 25%;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .nav-buttons div a p {
+        text-align: center;
+        margin:0 0 5% 0;
+    }
+
+    .nav-bar {
+        width:100%;
+        flex-direction:column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
     }
 
     .logo {
