@@ -1008,6 +1008,10 @@ button {
     .logo:hover {
         width:100%
     }
+    
+    .logo a {
+        width:100%;
+    }
 
     #logo-img {
         width: 20%;
