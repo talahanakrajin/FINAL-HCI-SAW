@@ -10,12 +10,12 @@ body {
     width: 100%;
     height: 100%;
     z-index: -1; 
-    background-image: url("img/TrashQuest_bg.jpg");
-    background-size: cover;
+    background-image: url("img/cleanup.jpeg");
     background-position: center;
-    filter: blur(0.5vh) brightness(80%); 
+    filter: blur(0.5vh) brightness(80%) sepia(1) hue-rotate(90deg) saturate(0.3);
     opacity: 0.8; 
 }
+
 
 /* Nav Bar */
 .navbar {
