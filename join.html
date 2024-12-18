@@ -16,10 +16,19 @@
         </div>
 
         <div class="nav-buttons roboto-mono-500">
-            <div class="about-us-"><a class="about-us-link">About Us</a></div>
-            <div class="volunteer"><a class="volunteer-link">Volunteer</a></div>
-            <div class="my-progress"><a class="my-progress-link">My Progress</a></div>
-            <div class="contact-us"><a class="contact-us-link">Contact Us</a></div>
+            <div class="about-us-"><a href="index.html" class="about-us-link">About Us</a></div>
+            <div class="volunteer"><a class="volunteer-link" href="volunteer.html">Volunteer</a></div>
+            <div class="my-progress"><a class="my-progress-link" href="my-progress.html">My Progress</a></div>
+            <div class="contact-us"><a href="index.html" class="contact-us-link">Contact Us</a></div>
+        </div>
+        <div class="user">
+            <a id="account-link" href="account.html">
+                <img src="img/user.png" alt="user_img">
+                <div class="user-points">
+                    <span id="user-name">User</span>
+                    <p id="user-points">₱0</p>
+                </div>
+            </a>
         </div>
     </nav>
 
@@ -83,13 +92,34 @@
 <script src="something.js"></script>
 <script src="loginthing.js"></script>
 <script>
-    // Example usage
-    checkUserData('exampleUser').then(exists => {
-        if (!exists) {
-            document.getElementById('account-link').href = 'login.html';
-            document.getElementById('account-text').textContent = 'Log in to your account';
+    // Check if the user is logged in
+    document.addEventListener('DOMContentLoaded', function() {
+        const loggedInUser = sessionStorage.getItem('loggedInUser');
+        if (!loggedInUser) {
+            alert('You must be logged in to join.');
+            window.location.href = 'login.html'; // Redirect to login page
         }
     });
+
+    function redirectToLogin() {
+        const loggedInUser = sessionStorage.getItem('loggedInUser');
+        if (!loggedInUser) {
+            window.location.href = 'login.html'; // Redirect to login page
+        } else {
+            // Proceed with the join action
+            alert('You are already logged in.');
+        }
+    }
+    // Display logged-in user data
+    const loggedInUser = JSON.parse(sessionStorage.getItem('loggedInUser'));
+    if (loggedInUser) {
+        document.getElementById('user-name').textContent = loggedInUser.username;
+        const points = calculateUserPoints(loggedInUser);
+        document.getElementById('user-points').textContent = `₱${points}`;
+    } else {
+        document.getElementById('account-link').href = 'login.html';
+    }
+
 </script>
 </body>
 </html>
