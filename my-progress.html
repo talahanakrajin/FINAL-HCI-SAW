@@ -47,6 +47,28 @@
         .progress-overview {
             margin-top: 10px;
         }
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #1a1919;
+            color: #44ea4f;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            z-index: 1000;
+            outline: 2px solid #44ea4f; /* Added outline */
+        }
+        .popup button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #44ea4f;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -68,7 +90,7 @@
                     <img src="img/user.png" alt="user_img">
                     <div class="user-points">
                         <span id="user-name">User</span>
-                        <p id="user-points">₱10000</p>
+                        <p id="user-points">₱0</p>
                     </div>
                 </a>
             </div>
@@ -108,6 +130,10 @@
             <h2>Your Activity</h2>
             <canvas id="activityChart"></canvas>
         </div>
+        <div class="popup" id="login-popup">
+            <p>You have to log in to see your progress</p>
+            <button id="login-button">OK</button>
+        </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
@@ -143,6 +169,29 @@
                     }
                 }
             });
+
+            const loggedInUser = sessionStorage.getItem('loggedInUser');
+            if (!loggedInUser) {
+                const popup = document.getElementById('login-popup');
+                popup.style.display = 'block';
+                document.getElementById('login-button').addEventListener('click', function() {
+                    window.location.href = 'login.html';
+                });
+            } else {
+                // User is logged in, allow access to the page
+                document.querySelector('main').style.display = 'block';
+                document.getElementById('user-name').textContent = JSON.parse(loggedInUser).username;
+                document.getElementById('user-points').textContent = `₱${calculateUserPoints(JSON.parse(loggedInUser))}`;
+            }
+
+            function calculateUserPoints(user) {
+                // Example calculation, adjust as needed
+                const basePoints = 0;
+                const trashThrownPoints = user.trashThrown || 0;
+                const eventVolunteerPoints = user.eventVolunteer || 0;
+                const placesCleanedPoints = user.placesCleaned || 0;
+                return basePoints + trashThrownPoints + eventVolunteerPoints + placesCleanedPoints;
+            }
         });
     </script>
 </body>
