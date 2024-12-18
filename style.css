@@ -653,6 +653,25 @@ body {
     background-color: #0c7a07;
 }
 
+.form-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.form-image {
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
 .copyright {
     display: flex;
     width: 25%;
@@ -927,9 +946,10 @@ button {
 
 .donate-content {
     padding: 20px;
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: left;
+    max-width: 500px;
+    margin: 6vw;
+    display: flex;
+    flex-direction: row;
 }
 
 .donate-form {
@@ -939,7 +959,7 @@ button {
 }
 
 .donate-form h1 {
-    align-self: flex-start; /* Align heading to the left */
+    align-self: center; /* Align heading to the left */
     margin-bottom: 20px;
 }
 
@@ -978,6 +998,8 @@ button {
 .donate-button:hover {
     background-color: #0c7a07;
 }
+
+
 
 @media screen and (max-width: 768px) {
     /* Navbar adjustments */
