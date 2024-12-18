@@ -580,6 +580,7 @@ nav-buttons div a p {
     width: 80vw;
     display: flex;
     flex-direction: column;
+    color:#44ea4f
 }
 
 .join-form label {
