@@ -17,11 +17,11 @@
             <span id="logo-adjust">Trash Quest</span>
         </div>
         <div class="user" id="user-in-logo">
-            <a href="account.html">
+            <a id="account-link" href="account.html">
                 <img src="img/user.png" alt="user_img">
                 <div class="user-points">
-                    <span>User</span>
-                    <p>₱10000</p>
+                    <span id="user-name">User</span>
+                    <p id="user-points">₱0</p>
                 </div>
             </a>
         </div>
@@ -194,13 +194,32 @@
   })
 </script>
 <script>
-    // Example usage
     checkUserData('exampleUser').then(exists => {
         if (!exists) {
             document.getElementById('account-link').href = 'login.html';
             document.getElementById('account-text').textContent = 'Log in to your account';
         }
     });
+  
+    // Display logged-in user data
+    const loggedInUser = JSON.parse(sessionStorage.getItem('loggedInUser'));
+    if (loggedInUser) {
+        document.getElementById('user-name').textContent = loggedInUser.username;
+        const points = calculateUserPoints(loggedInUser);
+        document.getElementById('user-points').textContent = `₱${points}`;
+    } else {
+        document.getElementById('account-link').href = 'login.html';
+    }
+
+    // Function to calculate user points based on progress
+    function calculateUserPoints(user) {
+        // Example calculation, adjust as needed
+        const basePoints = 0;
+        const trashThrownPoints = user.trashThrown || 0;
+        const eventVolunteerPoints = user.eventVolunteer || 0;
+        const placesCleanedPoints = user.placesCleaned || 0;
+        return basePoints + trashThrownPoints + eventVolunteerPoints + placesCleanedPoints;
+    }
 </script>
 </body>
 </html>

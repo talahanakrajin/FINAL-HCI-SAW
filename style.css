@@ -613,6 +613,25 @@ nav-buttons div a p {
     background-color: #0c7a07;
 }
 
+.form-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.form-image {
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
 .copyright {
     display: flex;
     width: 25%;
@@ -674,7 +693,7 @@ nav-buttons div a p {
 }
 
 .login-container form {
-    background-color: #9EDF9C;
+    background-color: #0fa20a;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -709,7 +728,7 @@ nav-buttons div a p {
 }
 
 .user-info {
-    background-color: #9EDF9C;
+    background-color: #0fa20a;
     border-radius: 10px;
     padding: 20px;
     margin: 20px auto;
@@ -840,41 +859,68 @@ button {
     color: black;
 }
 
+.donate-content {
+    padding: 20px;
+    max-width: 500px;
+    margin: 6vw;
+    display: flex;
+    flex-direction: row;
+}
+
+.donate-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.donate-form h1 {
+    align-self: center; /* Align heading to the left */
+    margin-bottom: 20px;
+}
+
+.donate-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    align-self: flex-start; /* Align labels to the left */
+}
+
+.donate-form input,
+.donate-form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%; /* Ensure full width */
+}
+
+.donate-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    background-color: #0fa20a;
+    color: white;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.donate-button:hover {
+    background-color: #0c7a07;
+}
+
+
 
 @media screen and (max-width: 768px) {
     /* Navbar adjustments */
     .navbar {
+        height: auto;
         flex-direction: column;
-        justify-content: center;
-        height:fit-content;
-        width:fit-content;
-    }
-
-    .nav-buttons {
-        flex-direction: column;
-        flex-wrap:wrap;
-    }
-
-    .nav-buttons div a{
-        width:50%;
-        margin:0 25% 0 25%;
-        display:flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-
-    .nav-buttons div a p {
-        text-align: center;
-        margin:0 0 5% 0;
-    }
-
-    .nav-bar {
-        width:100%;
-        flex-direction:column;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
     }
 
     .logo {
