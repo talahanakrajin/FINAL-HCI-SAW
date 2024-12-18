@@ -535,8 +535,8 @@ nav-buttons div a p {
 }
 
 .opportunity img {
-    width: 100%;
-    height: auto;
+    width: 25vw;
+    height: 50vh;
     border-radius: 10px;
 }
 
