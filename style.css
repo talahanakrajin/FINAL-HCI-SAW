@@ -13,7 +13,7 @@ body {
     background-image: url("img/TrashQuest_bg.jpg");
     background-size: cover;
     background-position: center;
-    filter: blur(0.5vh) brightness(80%); 
+    filter: blur(0.5vh) brightness(20%); 
     opacity: 0.8; 
 }
 
@@ -657,7 +657,7 @@ nav-buttons div a p {
 }
 
 .progress {
-    background-color: #4caf50;
+    background-color: #00ff08;
     height: 20px;
     width: 0;
     transition: width 0.5s;
@@ -665,7 +665,7 @@ nav-buttons div a p {
 
 .stats {
     font-size: 1.2em;
-    color: #ffffff;
+    color: #44ea4f;
 }
 
 .stats p {
@@ -673,7 +673,7 @@ nav-buttons div a p {
 }
 
 .progress-overview {
-    color: #ffffff;
+    color: #44ea4f;
 }
 
 
@@ -688,12 +688,12 @@ nav-buttons div a p {
 }
 
 .login-container h2 {
-    color: white;
+    color: #44ea4f;
     margin-bottom: 20px;
 }
 
 .login-container form {
-    background-color: #0fa20a;
+    background-color: #1a1919;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -701,7 +701,7 @@ nav-buttons div a p {
 }
 
 .login-container label {
-    color: white;
+    color: #44ea4f;
     display: block;
     margin: 10px 0 5px;
 }
@@ -715,7 +715,7 @@ nav-buttons div a p {
 }
 
 .login-container button {
-    background-color: #526E48;
+    background-color: #0fa20a;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -724,7 +724,8 @@ nav-buttons div a p {
 }
 
 .login-container button:hover {
-    background-color: #3B4D36;
+    background-color: #0c6e09;
+  
 }
 
 .user-info {
@@ -743,7 +744,7 @@ nav-buttons div a p {
 }
 
 .user-info .edit-button, .user-info .save-button {
-    background-color: #526E48;
+    background-color: #28a130;
     color: white;
     padding: 7px 17px;
     border: none;
@@ -753,11 +754,11 @@ nav-buttons div a p {
 }
 
 .user-info .edit-button:hover, .user-info .save-button:hover {
-    background-color: #3B4D36;
+    background-color: #226927;
 }
 
 .user-info .logout-button {
-    background-color: #FF6347;
+    background-color: #ff0000;
     color: white;
     padding: 7px 17px;
     border: none;
@@ -767,7 +768,7 @@ nav-buttons div a p {
 }
 
 .user-info .logout-button:hover {
-    background-color: #FF4500;
+    background-color: #922700;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -852,7 +853,7 @@ button {
 }
 
 .form-group label {
-    color: white;
+    color: #44ea4f;
 }
 
 .form-group input {
