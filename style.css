@@ -502,6 +502,7 @@ nav-buttons div a p {
 /* Volunteer */
 .volunteer-content {
     padding: 20px;
+    color:#44ea4f
 }
 
 .volunteer-content h1 {
@@ -543,8 +544,8 @@ nav-buttons div a p {
     width: 50%;
     margin: 0 auto;
     padding: 10px;
-    background-color: #0fa20a;
-    color: white;
+    background-color: #084406;
+    color: #44ea4f;
     text-align: center;
     border: none;
     border-radius: 10px;
@@ -556,7 +557,7 @@ nav-buttons div a p {
 
 .join-button a {
     text-decoration: none;
-    color: white;
+    color: #44ea4f;
 }
 
 .join-button:hover {
@@ -572,7 +573,7 @@ nav-buttons div a p {
 }
 
 .join-form {
-    width: 35vw;
+    width: 80vw;
     display: flex;
     flex-direction: column;
 }
@@ -615,20 +616,23 @@ nav-buttons div a p {
 
 .form-container {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
 }
 
 .form-image {
-    width: 35%;
+    width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
+    margin-left: 10vw;
+    margin-top: 150px;
 }
 
 .form-image img {
-    max-width: 100%;
-    height: auto;
+    max-width: 400px;
+    height: 100%;
     border-radius: 10px;
 }
 
@@ -860,14 +864,16 @@ button {
 }
 
 .donate-content {
+    color:#44ea4f;
     padding: 20px;
-    max-width: 500px;
+    max-width: 600px;
     margin: 6vw;
     display: flex;
     flex-direction: row;
 }
 
 .donate-form {
+    width: 80vw;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -898,10 +904,11 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 104%;
+    margin: 0 auto;
     padding: 10px;
-    background-color: #0fa20a;
-    color: white;
+    background-color: #084406;
+    color: #44ea4f;
     text-align: center;
     border: none;
     border-radius: 10px;
@@ -910,11 +917,14 @@ button {
     transition: background-color 0.3s;
 }
 
+.donate-button a {
+    text-decoration: none;
+    color: #44ea4f;
+}
+
 .donate-button:hover {
     background-color: #0c7a07;
 }
-
-
 
 @media screen and (max-width: 768px) {
     /* Navbar adjustments */
