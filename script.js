@@ -4,12 +4,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const nextButton = document.querySelector('.next');
     const prevButton = document.querySelector('.prev');
     
-    let currentIndex = 0;
+    let currentIndex = 1;
     const slideWidth = slides[0].getBoundingClientRect().width;
     
     // Arrange slides next to each other
     slides.forEach((slide, index) => {
-        slide.style.left = slideWidth * index + 'px';
+        slide.style.left = slideWidth * index + 'vw';
     });
     
     const moveToSlide = (currentIndex) => {
@@ -30,16 +30,29 @@ document.addEventListener('DOMContentLoaded', () => {
     moveToSlide(0);
     
     nextButton.addEventListener('click', () => {
-        if (currentIndex < slides.length - 3) {
+        if (currentIndex < slides.length - 2) {
             currentIndex++;
             moveToSlide(currentIndex);
         }
     });
     
     prevButton.addEventListener('click', () => {
-        if (currentIndex > 0) {
+        if (currentIndex > -1) {
             currentIndex--;
             moveToSlide(currentIndex);
         }
     });
 });
+
+function disableAOSAttribute() {
+    const elements = document.querySelectorAll('[data-aos]');
+    if (window.innerWidth < 760) {
+        elements.forEach(el => el.removeAttribute('data-aos'));
+    } else {
+        elements.forEach(el => el.setAttribute('data-aos', 'fade-right'));
+    }
+}
+
+// Run the function on page load and when the window is resized
+disableAOSAttribute();
+window.addEventListener('resize', disableAOSAttribute);
