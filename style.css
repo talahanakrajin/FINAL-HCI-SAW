@@ -1103,6 +1103,8 @@ button {
     }
     .content-right {
         width:100%;
+        margin:0;
+        padding:0;
     }
     .content-block-left {
         width:99%;
@@ -1119,28 +1121,48 @@ button {
         font-size:1vh;
     }
 
+    .journey {
+        font-size:4vh;
+        margin:0;
+        padding:0;
+    }
+
     h4 {
         font-size:1.5vh;
     }
 
     /* Footer adjustments */
     .footer {
-        height: 30vh;
+        height: 25vh;
         padding: 4vh 0;
     }
 
     .footer-nav {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         padding: 2vh;
     }
 
     .footer-nav a {
-        margin: 1vh 0;
+        margin: 0 0;
+        font-size:1.5vh;
+        text-align: center;
     }
 
     .footer-contact-links {
         width: 80%;
+    }
+
+    .copyright {
+        width:70%;
+    }
+
+    .reach-out p {
+        font-size:3.5vh;
+    }
+
+    .sep-line {
+        width:90%;
     }
 }
 
