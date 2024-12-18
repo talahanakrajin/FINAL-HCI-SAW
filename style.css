@@ -26,23 +26,28 @@ body {
 }
 
 .logo {
+    height:90%;
+    width: 25%;
+}
+
+.logo a{
     /* background-color: #526E48; */
     background-color: #000;
     border-bottom-right-radius: 5vh;
-    height:90%;
-    width: 25%;
+    height:100%;
+    width: 85%;
     font-size: 4.5vh;
     text-align: center;
-    color:#44ea4f;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding-right: 5vw;
     transition: all 0.5s ease-in-out;
+    text-decoration: none;
 }
 
-.logo:hover {
-    width: 30%;
+.logo a:hover {
+    width: 95%;
     height: 130%;
     font-size: 5vh;
 }
@@ -56,6 +61,8 @@ body {
 
 #logo-adjust {
     margin:auto;
+    color:#44ea4f;
+    text-decoration: none;
 }
 
 .nav-bar {
