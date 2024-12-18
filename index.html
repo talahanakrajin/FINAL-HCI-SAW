@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="fonts.css">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="img/Trash Quest logo 1 1.jpeg" type="image/x-icon">
@@ -15,20 +16,28 @@
             <img id="logo-img" src="img/Trash Quest logo 1 1.jpeg" alt="TQ logo">
             <span id="logo-adjust">Trash Quest</span>
         </div>
-        <div class="nav_bar">
+        <div class="user" id="user-in-logo">
+            <a href="account.html">
+                <img src="img/user.png" alt="user_img">
+                <div class="user-points">
+                    <span>User</span>
+                    <p>₱10000</p>
+                </div>
+            </a>
+        </div>
+        <div class="nav-bar">
             <div class="nav-buttons roboto-mono-500">
-                <div class="about-us-"><a href="#about-us" class="about-us-link">About Us</a></div>
-                <div class="volunteer"><a class="volunteer-link" href="volunteer.html">Volunteer</a></div>
-                <div class="my-progress"><a class="my-progress-link" href="my-progress.html">My Progress</a></div>
-                <div class="contact-us"><a href="#contact-us" class="contact-us-link">Contact Us</a></div>
+                <div class="about-us-"><a href="#about-us" class="about-us-link"><p>About Us</p></a></div>
+                <div class="volunteer"><a href="volunteer.html" class="volunteer-link"><p>Volunteer</p></a></div>
+                <div class="my-progress"><a href="my-progress.html" class="my-progress-link"><p>My Progress</p></a></div>
+                <div class="contact-us"><a href ="#footer-contact" class="contact-us-link"><p>Contact Us</p></a></div>
             </div>
-            
             <div class="user">
-                <a id="account-link" href="account.html">
+                <a href="account.html">
                     <img src="img/user.png" alt="user_img">
                     <div class="user-points">
-                        <span id="user-name">User</span>
-                        <p id="user-points">₱0</p>
+                        <span>User</span>
+                        <p>₱10000</p>
                     </div>
                 </a>
             </div>
@@ -72,66 +81,118 @@
       <button class="carousel-button next">&#10095;</button>
   </div>
 
-  <div class="donatebutton-centering">
-    <div class="kanit-bold">
-        <button class="donate-us" onclick="window.location.href='donate.html'">Donate Now</button>
-    </div>
-  </div>
-
-    <div id="about-us" class="content-block-left oswald-500">
-        <img src="img/smart_can1.png" alt="">
-        <div class="description">
-            lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. lorem ipsum;
+    <div class="donatebutton-centering">
+        <div class="kanit-bold">
+            <button class="donate-us">Donate Now</button>
         </div>
     </div>
-    
-    <div class="content-block-right oswald-500">
-        <div class="description">
-            lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. lorem ipsum;
+    <div id="about-us" class="dynamic-border">
+        <h3 class="journey">Our Journey</h3>
+    </div>
+    <div class="content-right">
+        <div class="content-block-right oswald-500" data-aos="fade-right">
+            <img src="img/bantargebang-founder.jpeg" alt="">
+            <div class="description">
+                <h4 class="kanit-bold">The Beginning of A Greater Future</h4>
+                In 2023, Bob, a tech enthusiast and environmentalist in Indonesia,
+                 grew frustrated with the pervasive trash problem damaging the country’s
+                  beauty and ecosystems. Inspired by children in a rural village who 
+                  turned trash into game tokens, he founded Trash Quest, a gamified platform 
+                  that made trash collection fun, rewarding, and impactful.
+                   The app allowed users to earn points and prizes by recycling waste, 
+                    and join community cleanup challenges. Partnering with recycling centers 
+                    and eco-friendly businesses, Bob created a circular economy that benefitted 
+                    both users and the environment. Trash Quest quickly became a national movement, 
+                    transforming waste management in Indonesia and fostering a cleaner, 
+                    greener future.
+            </div>
         </div>
-        <img src="img/snarttrash.jpg" alt="">
+    </div>
+    <div class="content-left">
+        <div class="content-block-left oswald-500" data-aos="fade-right">
+            <div class="description">
+                Introducing the first-of-its-kind smart trash bin placed in New York City!
+                 This showcases our latest hands-free, modern trash bin designed to 
+                 revolutionize public spaces. Trash Quest combines innovative technology
+                  with a gamified approach, encouraging cleaner communities by rewarding users for disposing of litter. As a pioneer in sustainable urban solutions, we're making trash collection effortless, fun, and impactful. Join the quest to keep NYC—and cities everywhere—clean, green, and beautiful
+            </div>
+            <img src="img/smart_can1.png" alt="">
+        </div>
+    </div>
+    <div class="content-right">
+        <div class="content-block-right oswald-500" data-aos="fade-right">
+            <img src="img/snarttrash.jpg" alt="">
+            <div class="description">
+                "Throwback to where it all began! This image features our earliest smart trash 
+                bin model, proudly deployed at Duke University. Designed to handle high-traffic
+                 environments, this innovative bin streamlined waste collection while 
+                 encouraging sustainable habits on campus. With its sleek design and efficient
+                  waste compression system, this model set the stage for Trash Quest's mission: 
+                  making trash disposal smarter, cleaner, and more impactful. From campuses 
+                  to cities, we’ve been on a quest to redefine sustainability from day one!"
+            </div>
+        </div>
+    </div>
+    <div class="content-left">
+        <div class="content-block-left oswald-500" data-aos="fade-right">
+            <div class="description">
+                Inspiring the next generation! 🌍 This image highlights our education program,
+                 where we teach kids about effective trash management, recycling, 
+                 and sustainability. Through fun, interactive sessions, we also introduce 
+                 them to our Trash Quest app and services, empowering them to become 
+                 eco-heroes from an early age. By gamifying the learning process, 
+                 we’re turning trash collection into an exciting adventure and building
+                  a greener future together—one young champion at a time!
+            </div>
+            <img src="img/children green.jpg" alt="">
+        </div>
     </div>
 
-    <div class="content-block-left oswald-500">
-        <img src="img/children green.jpg" alt="">
-        <div class="description">
-            lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos. lorem ipsum;
-        </div>
-    </div>
-
-  <div id="contact-us" class="footer">
+  <div class="footer" id = "footer-contact">
       <nav class="footer-nav roboto-mono-300">
-          <a href="">About Us</a>
-          <a href="">Volunteer</a>
-          <a href="">My Progress</a>
-          <a href="">Donate Now</a>
+          <a href="#about-us">About Us</a>
+          <a href="volunteer.html">Volunteer</a>
+          <a href="my-progress.html">My Progress</a>
+          <a href="#">Donate Now</a>
       </nav>
-      <div class="footer-contact-links">
-          <a href ="" class="wa">
-              <div>
-                  <img src="img/whatsapp.png" alt="wa">
-              </div>
-          </a>
-          <a class="insta">
-              <div>
-                  <img src="img/instagram.png" alt="ig">
-              </div>
-          </a>
-          <a class="mail">
-              <div>
-                  <img src="img/mail.png" alt="mail">
-              </div>
-          </a>
-          <a class="phone">
-              <div>
-                  <img src="img/telephone.png" alt="telp">
-              </div>
-          </a>
+      <div class="reach-out bebas-neue-regular">
+        <p>Reach Out and Connect With Us On</p>
+        <div class="sep-line"></div>
+        <div class="footer-contact-links">
+            <a href ="" class="wa">
+                <div>
+                    <img src="img/whatsapp.png" alt="wa">
+                </div>
+            </a>
+            <a class="insta">
+                <div>
+                    <img src="img/instagram.png" alt="ig">
+                </div>
+            </a>
+            <a class="mail">
+                <div>
+                    <img src="img/mail.png" alt="mail">
+                </div>
+            </a>
+            <a class="phone">
+                <div>
+                    <img src="img/telephone.png" alt="telp">
+                </div>
+            </a>
+        </div>
+      <div class="copyright bebas-neue-regular">©2020-2024 Trash Quest Group Inc.</div>
       </div>
   </div>
 <script src="script.js"></script>
 <script src="something.js"></script>
 <script src="loginthing.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+  AOS.init({
+    duration: 400
+  })
+</script>
 <script>
     // Example usage
     checkUserData('exampleUser').then(exists => {
@@ -140,26 +201,6 @@
             document.getElementById('account-text').textContent = 'Log in to your account';
         }
     });
-  
-    // Display logged-in user data
-    const loggedInUser = JSON.parse(sessionStorage.getItem('loggedInUser'));
-    if (loggedInUser) {
-        document.getElementById('user-name').textContent = loggedInUser.username;
-        const points = calculateUserPoints(loggedInUser);
-        document.getElementById('user-points').textContent = `₱${points}`;
-    } else {
-        document.getElementById('account-link').href = 'login.html';
-    }
-
-    // Function to calculate user points based on progress
-    function calculateUserPoints(user) {
-        // Example calculation, adjust as needed
-        const basePoints = 0;
-        const trashThrownPoints = user.trashThrown || 0;
-        const eventVolunteerPoints = user.eventVolunteer || 0;
-        const placesCleanedPoints = user.placesCleaned || 0;
-        return basePoints + trashThrownPoints + eventVolunteerPoints + placesCleanedPoints;
-    }
 </script>
 </body>
 </html>
