@@ -635,7 +635,7 @@ nav-buttons div a p {
 }
 
 .form-image img {
-    max-width: 400px;
+    max-width: 600px;
     height: 100%;
     border-radius: 10px;
 }
@@ -928,6 +928,10 @@ button {
 
 .donate-button:hover {
     background-color: #0c7a07;
+}
+
+.image-logo {
+    width: 100%;
 }
 
 @media screen and (max-width: 768px) {
